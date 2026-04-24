@@ -6,74 +6,75 @@
   <title>Aura Desarrollos — Áreas de Oportunidad</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', sans-serif; background: #0d1117; color: #e6edf3; min-height: 100vh; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f5f7fa; color: #1a202c; min-height: 100vh; }
 
     header {
-      background: #161b22; border-bottom: 1px solid #21262d;
+      background: #1a2332; border-bottom: 1px solid #243044;
       padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
     }
     .header-left { display: flex; align-items: center; gap: 14px; }
-    .brand-tag { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #8b949e; }
-    .brand-name { font-size: 1rem; font-weight: 700; color: #e6edf3; }
-    .divider-v { width: 1px; height: 30px; background: #30363d; }
+    .brand-tag { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #8b9ab0; }
+    .brand-name { font-size: 1rem; font-weight: 700; color: #ffffff; }
+    .divider-v { width: 1px; height: 30px; background: #2d3f55; }
     .confidential {
-      font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #f85149;
-      background: rgba(248,81,73,0.1); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(248,81,73,0.3);
+      font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #e05252;
+      background: rgba(224,82,82,0.12); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(224,82,82,0.3);
     }
 
     .hero { padding: 48px 40px 28px; max-width: 1060px; margin: 0 auto; }
-    .hero-tag { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #2ea043; margin-bottom: 10px; }
-    .hero h1 { font-size: 2rem; font-weight: 700; color: #e6edf3; margin-bottom: 10px; line-height: 1.2; }
-    .hero p { font-size: 0.9rem; color: #8b949e; max-width: 660px; line-height: 1.65; }
+    .hero-tag { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #2d8c4e; margin-bottom: 10px; }
+    .hero h1 { font-size: 2rem; font-weight: 700; color: #1a202c; margin-bottom: 10px; line-height: 1.2; }
+    .hero p { font-size: 0.9rem; color: #4a5568; max-width: 660px; line-height: 1.65; }
 
     .stats { max-width: 1060px; margin: 0 auto 36px; padding: 0 40px; display: flex; gap: 14px; flex-wrap: wrap; }
-    .stat { background: #161b22; border: 1px solid #21262d; border-radius: 10px; padding: 14px 20px; flex: 1; min-width: 120px; text-align: center; }
+    .stat { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px 20px; flex: 1; min-width: 120px; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
     .stat .num { font-size: 1.5rem; font-weight: 700; }
-    .stat .num.red { color: #f85149; }
-    .stat .num.green { color: #2ea043; }
-    .stat .num.yellow { color: #d29922; }
-    .stat .lbl { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #8b949e; margin-top: 3px; }
+    .stat .num.red { color: #c53030; }
+    .stat .num.green { color: #2d8c4e; }
+    .stat .num.yellow { color: #b7791f; }
+    .stat .lbl { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #718096; margin-top: 3px; }
 
     .cards { max-width: 1060px; margin: 0 auto; padding: 0 40px 48px; display: flex; flex-direction: column; gap: 18px; }
 
-    .card { background: #161b22; border: 1px solid #21262d; border-radius: 12px; overflow: hidden; }
+    .card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
 
     .card-head {
       padding: 16px 20px 14px; display: flex; align-items: center;
-      justify-content: space-between; border-bottom: 1px solid #21262d; flex-wrap: wrap; gap: 8px;
+      justify-content: space-between; border-bottom: 1px solid #e2e8f0; flex-wrap: wrap; gap: 8px;
+      background: #f8fafc;
     }
     .card-head-left { display: flex; align-items: center; gap: 10px; }
-    .sec-num { font-size: 10px; font-weight: 700; letter-spacing: 2px; color: #8b949e; }
-    .card-title { font-size: 0.95rem; font-weight: 600; color: #e6edf3; }
+    .sec-num { font-size: 10px; font-weight: 700; letter-spacing: 2px; color: #a0aec0; }
+    .card-title { font-size: 0.95rem; font-weight: 600; color: #1a202c; }
     .badge { font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; white-space: nowrap; }
-    .red-b   { background: rgba(248,81,73,0.12);  color: #f85149; border: 1px solid rgba(248,81,73,0.25); }
-    .yellow-b{ background: rgba(210,153,34,0.12); color: #d29922; border: 1px solid rgba(210,153,34,0.25); }
-    .green-b { background: rgba(46,160,67,0.12);  color: #2ea043; border: 1px solid rgba(46,160,67,0.25); }
+    .red-b   { background: #fff5f5; color: #c53030; border: 1px solid #fed7d7; }
+    .yellow-b{ background: #fffbeb; color: #b7791f; border: 1px solid #fbd38d; }
+    .green-b { background: #f0fff4; color: #2d8c4e; border: 1px solid #9ae6b4; }
 
     .card-body { padding: 16px 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
     .col-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
-    .col-label.red   { color: #f85149; }
-    .col-label.green { color: #2ea043; }
+    .col-label.red   { color: #c53030; }
+    .col-label.green { color: #2d8c4e; }
 
     .prob-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
-    .prob-list li { font-size: 0.81rem; color: #8b949e; padding-left: 14px; position: relative; line-height: 1.5; }
-    .prob-list li::before { content: '×'; position: absolute; left: 0; color: #f85149; font-weight: 700; }
+    .prob-list li { font-size: 0.81rem; color: #4a5568; padding-left: 14px; position: relative; line-height: 1.5; }
+    .prob-list li::before { content: '×'; position: absolute; left: 0; color: #c53030; font-weight: 700; }
 
-    .sol-box { background: rgba(46,160,67,0.07); border: 1px solid rgba(46,160,67,0.18); border-radius: 8px; padding: 12px 14px; }
-    .sol-box strong { font-size: 0.8rem; color: #3fb950; display: block; margin-bottom: 6px; }
-    .sol-box p { font-size: 0.81rem; color: #adbac7; line-height: 1.6; }
+    .sol-box { background: #f0fff4; border: 1px solid #9ae6b4; border-radius: 8px; padding: 12px 14px; }
+    .sol-box strong { font-size: 0.8rem; color: #2d8c4e; display: block; margin-bottom: 6px; }
+    .sol-box p { font-size: 0.81rem; color: #2d3748; line-height: 1.6; }
 
     .impact { max-width: 1060px; margin: 0 auto; padding: 0 40px 48px; }
-    .impact h2 { font-size: 1rem; font-weight: 600; color: #e6edf3; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #21262d; }
+    .impact h2 { font-size: 1rem; font-weight: 600; color: #1a202c; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0; }
     .impact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-    .impact-card { background: #161b22; border: 1px solid #21262d; border-radius: 10px; padding: 20px; text-align: center; }
-    .impact-card .sce { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #8b949e; margin-bottom: 6px; }
+    .impact-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+    .impact-card .sce { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #718096; margin-bottom: 6px; }
     .impact-card .amt { font-size: 1.6rem; font-weight: 700; margin-bottom: 4px; }
-    .impact-card .roi { font-size: 0.78rem; color: #8b949e; }
-    .c1 .amt { color: #d29922; } .c2 .amt { color: #2ea043; } .c3 .amt { color: #3fb950; }
+    .impact-card .roi { font-size: 0.78rem; color: #718096; }
+    .c1 .amt { color: #b7791f; } .c2 .amt { color: #2d8c4e; } .c3 .amt { color: #276749; }
 
-    footer { border-top: 1px solid #21262d; padding: 20px 40px; text-align: center; font-size: 0.72rem; color: #484f58; }
+    footer { border-top: 1px solid #e2e8f0; padding: 20px 40px; text-align: center; font-size: 0.72rem; color: #a0aec0; }
 
     @media (max-width: 680px) {
       header, .hero, .stats, .cards, .impact { padding-left: 16px; padding-right: 16px; }
@@ -234,50 +235,24 @@
         <div>
           <div class="col-label red">× Lo que está mal</div>
           <ul class="prob-list">
-            <li>1 sola persona genera el 100% de los planos — punto único de falla</li>
-            <li>Solo AutoCAD 2D y SketchUp — sin BIM, sin Revit, sin plataforma colaborativa</li>
-            <li>Planos se intercambian por email sin control de versiones — riesgo de construir con planos obsoletos</li>
-            <li>Disciplinas en silos: arquitectura, estructura, eléctrico e hidráulico sin coordinación entre sí</li>
-            <li>Interferencias descubiertas en campo → retrabajo y sobrecosto</li>
-            <li>Obra arranca sin ingeniería completa — especificaciones se definen sobre la marcha (3+ iteraciones por proyecto)</li>
+            <li>$40M en ahorros de ingeniería de valor generados ad-hoc por una sola persona — el talento existe, el proceso no</li>
+            <li>36 ítems críticos en Pantaleón (incendio, 440V, ventilación) en "Stand By" — fuera de presupuesto por no anticiparse en diseño</li>
+            <li>Obra arranca sin ingeniería completa — especificaciones se definen sobre la marcha, 3+ iteraciones por proyecto</li>
+            <li>Planos gestionados por WhatsApp y email sin control de versiones — riesgo real de construir con planos obsoletos</li>
+            <li>Disciplinas en silos: arquitectura, estructura, eléctrico e hidráulico sin punto de coordinación</li>
+            <li>Sin MS Project ni programa maestro — seguimiento de obra por WhatsApp</li>
           </ul>
         </div>
         <div>
           <div class="col-label green">✓ Cómo se arregla</div>
           <div class="sol-box">
-            <strong>Gate "For Construction" obligatorio + DCM semanal pre-obra</strong>
-            <p>Junta semanal de coordinación entre disciplinas antes y durante la obra, checklist de entregables completos antes de arrancar construcción, control de versiones centralizado y proceso formal de Change Order. A futuro: BIM para detección automática de interferencias.</p>
+            <strong>Gate "For Construction" + DCM semanal + institucionalizar los $40M</strong>
+            <p>Junta de coordinación entre disciplinas antes y durante la obra, checklist obligatorio antes de arrancar construcción, control de versiones centralizado, proceso formal de Change Order, y sistematizar la ingeniería de valor para que los ahorros no dependan de que una persona específica participe en la revisión.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- FINANCIERO -->
-    <div class="card">
-      <div class="card-head">
-        <div class="card-head-left"><span class="sec-num">03</span><span class="card-title">Panorama Financiero</span></div>
-        <span class="badge red-b">CMM 1.2 — Crítico</span>
-      </div>
-      <div class="card-body">
-        <div>
-          <div class="col-label red">× Lo que está mal</div>
-          <ul class="prob-list">
-            <li>Modelo financiero robusto al inicio, desconectado totalmente de la ejecución</li>
-            <li>Triple captura: Opus → Excel (250+ pestañas) → Odoo sin conciliación</li>
-            <li>Pre-presupuesto sobreestimado 3-4x; ejecución real al 25% de lo proyectado</li>
-            <li>Sin análisis financiero de cierre — rentabilidad real de proyectos terminados, desconocida</li>
-            <li>Contraloría excluida de visibilidad de costos por proyecto — depende de lo que Operaciones reporte</li>
-          </ul>
-        </div>
-        <div>
-          <div class="col-label green">✓ Cómo se arregla</div>
-          <div class="sol-box">
-            <strong>PIC como puente financiero-operativo</strong>
-            <p>Traducir modelo financiero en presupuesto base operativo, ligar al cronograma vía curva S, validación cruzada de pagos (factura vs. contrato/OC), EVM semanal y cierre obligatorio con cálculo real de rentabilidad y lecciones aprendidas.</p>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- COMERCIAL -->
     <div class="card">
