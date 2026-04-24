@@ -8,31 +8,6 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Segoe UI', sans-serif; background: #0d1117; color: #e6edf3; min-height: 100vh; }
 
-    /* PASSWORD */
-    #password-screen {
-      position: fixed; inset: 0; background: #0d1117;
-      display: flex; align-items: center; justify-content: center; z-index: 9999;
-    }
-    .pass-box { text-align: center; max-width: 340px; width: 90%; }
-    .pass-box .tag { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #2ea043; margin-bottom: 14px; }
-    .pass-box h2 { font-size: 1.4rem; color: #e6edf3; margin-bottom: 6px; }
-    .pass-box p { font-size: 0.82rem; color: #8b949e; margin-bottom: 24px; }
-    .pass-box input {
-      width: 100%; padding: 11px 14px; background: #161b22;
-      border: 1px solid #30363d; border-radius: 8px; color: #e6edf3;
-      font-size: 0.9rem; text-align: center; letter-spacing: 4px; margin-bottom: 10px; outline: none;
-    }
-    .pass-box input:focus { border-color: #2ea043; }
-    .pass-box button {
-      width: 100%; padding: 11px; background: #2ea043; color: white;
-      border: none; border-radius: 8px; font-size: 0.88rem; font-weight: 600; cursor: pointer;
-    }
-    .pass-box button:hover { background: #3fb950; }
-    .pass-error { color: #f85149; font-size: 0.78rem; margin-top: 8px; display: none; }
-
-    /* MAIN */
-    #main { display: none; }
-
     header {
       background: #161b22; border-bottom: 1px solid #21262d;
       padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
@@ -46,87 +21,69 @@
       background: rgba(248,81,73,0.1); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(248,81,73,0.3);
     }
 
-    .hero { padding: 48px 40px 32px; max-width: 1000px; margin: 0 auto; }
+    .hero { padding: 48px 40px 28px; max-width: 1060px; margin: 0 auto; }
     .hero-tag { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #2ea043; margin-bottom: 10px; }
     .hero h1 { font-size: 2rem; font-weight: 700; color: #e6edf3; margin-bottom: 10px; line-height: 1.2; }
-    .hero p { font-size: 0.9rem; color: #8b949e; max-width: 620px; line-height: 1.65; }
+    .hero p { font-size: 0.9rem; color: #8b949e; max-width: 660px; line-height: 1.65; }
 
-    .stats { max-width: 1000px; margin: 0 auto 36px; padding: 0 40px; display: flex; gap: 14px; flex-wrap: wrap; }
-    .stat {
-      background: #161b22; border: 1px solid #21262d; border-radius: 10px;
-      padding: 14px 20px; flex: 1; min-width: 120px; text-align: center;
-    }
-    .stat .num { font-size: 1.6rem; font-weight: 700; }
+    .stats { max-width: 1060px; margin: 0 auto 36px; padding: 0 40px; display: flex; gap: 14px; flex-wrap: wrap; }
+    .stat { background: #161b22; border: 1px solid #21262d; border-radius: 10px; padding: 14px 20px; flex: 1; min-width: 120px; text-align: center; }
+    .stat .num { font-size: 1.5rem; font-weight: 700; }
     .stat .num.red { color: #f85149; }
     .stat .num.green { color: #2ea043; }
     .stat .num.yellow { color: #d29922; }
     .stat .lbl { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #8b949e; margin-top: 3px; }
 
-    .cards { max-width: 1000px; margin: 0 auto; padding: 0 40px 48px; display: flex; flex-direction: column; gap: 18px; }
+    .cards { max-width: 1060px; margin: 0 auto; padding: 0 40px 48px; display: flex; flex-direction: column; gap: 18px; }
 
     .card { background: #161b22; border: 1px solid #21262d; border-radius: 12px; overflow: hidden; }
 
     .card-head {
       padding: 16px 20px 14px; display: flex; align-items: center;
-      justify-content: space-between; border-bottom: 1px solid #21262d;
+      justify-content: space-between; border-bottom: 1px solid #21262d; flex-wrap: wrap; gap: 8px;
     }
     .card-head-left { display: flex; align-items: center; gap: 10px; }
     .sec-num { font-size: 10px; font-weight: 700; letter-spacing: 2px; color: #8b949e; }
     .card-title { font-size: 0.95rem; font-weight: 600; color: #e6edf3; }
     .badge { font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; white-space: nowrap; }
-    .red-b { background: rgba(248,81,73,0.12); color: #f85149; border: 1px solid rgba(248,81,73,0.25); }
-    .yellow-b { background: rgba(210,153,34,0.12); color: #d29922; border: 1px solid rgba(210,153,34,0.25); }
+    .red-b   { background: rgba(248,81,73,0.12);  color: #f85149; border: 1px solid rgba(248,81,73,0.25); }
+    .yellow-b{ background: rgba(210,153,34,0.12); color: #d29922; border: 1px solid rgba(210,153,34,0.25); }
+    .green-b { background: rgba(46,160,67,0.12);  color: #2ea043; border: 1px solid rgba(46,160,67,0.25); }
 
     .card-body { padding: 16px 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    @media (max-width: 680px) { .card-body { grid-template-columns: 1fr; } }
 
-    .col-label {
-      font-size: 10px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px;
-      display: flex; align-items: center; gap: 6px;
-    }
-    .col-label.red { color: #f85149; }
+    .col-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+    .col-label.red   { color: #f85149; }
     .col-label.green { color: #2ea043; }
 
     .prob-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
-    .prob-list li {
-      font-size: 0.81rem; color: #8b949e; padding-left: 14px;
-      position: relative; line-height: 1.5;
-    }
+    .prob-list li { font-size: 0.81rem; color: #8b949e; padding-left: 14px; position: relative; line-height: 1.5; }
     .prob-list li::before { content: '×'; position: absolute; left: 0; color: #f85149; font-weight: 700; }
 
-    .sol-box {
-      background: rgba(46,160,67,0.07); border: 1px solid rgba(46,160,67,0.18);
-      border-radius: 8px; padding: 12px 14px;
-    }
-    .sol-box strong {
-      font-size: 0.8rem; color: #3fb950; display: block; margin-bottom: 6px;
-    }
+    .sol-box { background: rgba(46,160,67,0.07); border: 1px solid rgba(46,160,67,0.18); border-radius: 8px; padding: 12px 14px; }
+    .sol-box strong { font-size: 0.8rem; color: #3fb950; display: block; margin-bottom: 6px; }
     .sol-box p { font-size: 0.81rem; color: #adbac7; line-height: 1.6; }
 
-    /* IMPACT */
-    .impact { max-width: 1000px; margin: 0 auto; padding: 0 40px 48px; }
+    .impact { max-width: 1060px; margin: 0 auto; padding: 0 40px 48px; }
     .impact h2 { font-size: 1rem; font-weight: 600; color: #e6edf3; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #21262d; }
     .impact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
     .impact-card { background: #161b22; border: 1px solid #21262d; border-radius: 10px; padding: 20px; text-align: center; }
     .impact-card .sce { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #8b949e; margin-bottom: 6px; }
     .impact-card .amt { font-size: 1.6rem; font-weight: 700; margin-bottom: 4px; }
     .impact-card .roi { font-size: 0.78rem; color: #8b949e; }
-    .c1 .amt { color: #d29922; }
-    .c2 .amt { color: #2ea043; }
-    .c3 .amt { color: #3fb950; }
+    .c1 .amt { color: #d29922; } .c2 .amt { color: #2ea043; } .c3 .amt { color: #3fb950; }
 
     footer { border-top: 1px solid #21262d; padding: 20px 40px; text-align: center; font-size: 0.72rem; color: #484f58; }
 
-    @media (max-width: 600px) {
+    @media (max-width: 680px) {
       header, .hero, .stats, .cards, .impact { padding-left: 16px; padding-right: 16px; }
       .hero h1 { font-size: 1.4rem; }
+      .card-body { grid-template-columns: 1fr; }
       .impact-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-
-<div id="main" style="display:block">
 
   <header>
     <div class="header-left">
@@ -141,38 +98,36 @@
   </header>
 
   <div class="hero">
-    <div class="hero-tag">Diagnóstico de Madurez Operativa</div>
+    <div class="hero-tag">Diagnóstico de Madurez Operativa — 13 Pilares</div>
     <h1>Áreas de Oportunidad y<br>Plan de Transformación</h1>
-    <p>CMM promedio actual <strong style="color:#f85149">1.5 / 5.0</strong> — Meta <strong style="color:#2ea043">3.0 / 5.0</strong>. Las 4 áreas críticas identificadas representan un potencial de ahorro de <strong style="color:#3fb950">$50–100M</strong> sobre un portafolio proyectado de $1B+ en 3 años.</p>
+    <p>CMM promedio actual <strong style="color:#f85149">1.5 / 5.0</strong> — Meta <strong style="color:#2ea043">3.0 / 5.0</strong>. Evaluación completa de la cadena de valor con <strong style="color:#e6edf3">50 oportunidades identificadas</strong> y un potencial de ahorro de <strong style="color:#3fb950">$50–100M</strong> sobre un portafolio proyectado de $1B+ en 3 años.</p>
   </div>
 
   <div class="stats">
     <div class="stat"><div class="num red">1.5</div><div class="lbl">CMM Promedio</div></div>
     <div class="stat"><div class="num red">50</div><div class="lbl">Oportunidades</div></div>
-    <div class="stat"><div class="num yellow">13</div><div class="lbl">Pilares Analizados</div></div>
+    <div class="stat"><div class="num yellow">19</div><div class="lbl">Entrevistas</div></div>
+    <div class="stat"><div class="num yellow">13</div><div class="lbl">Pilares</div></div>
     <div class="stat"><div class="num green">$50–100M</div><div class="lbl">Ahorro Potencial</div></div>
   </div>
 
   <div class="cards">
 
-    <!-- 1 -->
+    <!-- PLANEACION -->
     <div class="card">
       <div class="card-head">
-        <div class="card-head-left">
-          <span class="sec-num">01</span>
-          <span class="card-title">Planeación y Presupuesto</span>
-        </div>
+        <div class="card-head-left"><span class="sec-num">06</span><span class="card-title">Planeación y Presupuesto</span></div>
         <span class="badge red-b">CMM 1.2 — Crítico</span>
       </div>
       <div class="card-body">
         <div>
           <div class="col-label red">× Lo que está mal</div>
           <ul class="prob-list">
-            <li>Sin PIC — sin línea base presupuestal durante ejecución</li>
-            <li>Sin CBS ni SOW — cada proyecto empieza de cero</li>
+            <li>Sin PIC — sin línea base presupuestal para controlar durante ejecución</li>
+            <li>Sin CBS ni SOW — cada proyecto empieza desde cero</li>
             <li>Sin TVD — se diseña primero, se presupuesta después</li>
             <li>Compras excluido: sin validación de precios de mercado</li>
-            <li>Triple captura Opus → Excel (250 pestañas) → Odoo sin conciliación</li>
+            <li>Triple captura: Opus → Excel (250 pestañas) → Odoo sin conciliación</li>
             <li>Desviaciones detectadas tarde: vialidades +$11.4M, eléctrica +$3.3M</li>
           </ul>
         </div>
@@ -180,19 +135,16 @@
           <div class="col-label green">✓ Cómo se arregla</div>
           <div class="sol-box">
             <strong>Ciclo integrado: TVD → CBS → SOW → PIC → EVM → Cierre</strong>
-            <p>Catálogo base de precios unitarios, validación cruzada con Compras, EVM con corte semanal (CPI/SPI), y cierre financiero obligatorio con lecciones aprendidas integradas al catálogo para futuros proyectos similares. Un solo flujo, una sola verdad.</p>
+            <p>Catálogo base de precios unitarios, validación cruzada con Compras, EVM con corte semanal (CPI/SPI), y cierre financiero obligatorio con lecciones aprendidas al catálogo para futuros proyectos. Un solo flujo, una sola verdad.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 2 -->
+    <!-- COMPRAS -->
     <div class="card">
       <div class="card-head">
-        <div class="card-head-left">
-          <span class="sec-num">02</span>
-          <span class="card-title">Compras y Abastecimiento</span>
-        </div>
+        <div class="card-head-left"><span class="sec-num">08</span><span class="card-title">Compras y Abastecimiento</span></div>
         <span class="badge red-b">CMM 1.0 — Crítico</span>
       </div>
       <div class="card-body">
@@ -201,28 +153,26 @@
           <ul class="prob-list">
             <li>92% de OCs ($130.5M) clasificadas urgentes — sin plan de materiales</li>
             <li>Cotización omitida; proveedor pre-asignado desde Operaciones</li>
-            <li>64% de ahorro cuando se fuerzan licitaciones (caso luminarias)</li>
-            <li>436 proveedores sin calificación; top 5 = 61% del gasto sin contratos marco</li>
-            <li>GCC: $1M de anticipo sin contrato formalizado</li>
+            <li>64% de ahorro posible cuando se fuerzan licitaciones (caso luminarias)</li>
+            <li>436 proveedores sin calificación formal; top 5 = 61% del gasto sin contratos marco</li>
+            <li>Sin segregación de funciones — una persona compra, aprueba y recibe</li>
+            <li>GCC: $1M de anticipo pagado sin contrato formalizado</li>
           </ul>
         </div>
         <div>
           <div class="col-label green">✓ Cómo se arregla</div>
           <div class="sol-box">
             <strong>Strategic Sourcing + contratos marco Pareto top-15</strong>
-            <p>Explosión de materiales ligada al cronograma, matriz Kraljic, 3 cotizaciones obligatorias, base de proveedores calificados con evaluación post-proyecto. Ahorro estimado: <strong style="color:#3fb950">$10–18M</strong> (8–15% del gasto Pareto).</p>
+            <p>Explosión de materiales ligada al cronograma, matriz Kraljic, 3 cotizaciones obligatorias por umbral, base de proveedores calificados con evaluación post-proyecto. Ahorro estimado: <strong style="color:#3fb950">$10–18M</strong> (8–15% del gasto Pareto).</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 3 -->
+    <!-- EJECUCION -->
     <div class="card">
       <div class="card-head">
-        <div class="card-head-left">
-          <span class="sec-num">03</span>
-          <span class="card-title">Ejecución y Control de Obra</span>
-        </div>
+        <div class="card-head-left"><span class="sec-num">09</span><span class="card-title">Ejecución y Control de Obra</span></div>
         <span class="badge red-b">CMM 1.1 — Crítico</span>
       </div>
       <div class="card-body">
@@ -232,27 +182,24 @@
             <li>Sin control de avance físico — sin PPC ni análisis de causas de no-cumplimiento</li>
             <li>Reporte semanal: 85% fotos, 15% datos — sin curva S ni ruta crítica</li>
             <li>Sin EVM: desviaciones de costo detectadas meses tarde o nunca</li>
-            <li>Pantaleón B: 58% sobretiempo (137 días extra) sin impacto documentado</li>
-            <li>Aprendizajes de proyectos terminados no se documentan — cada obra reinventa los mismos errores</li>
+            <li>Pantaleón B: 58% sobretiempo (137 días extra) sin análisis de impacto documentado</li>
+            <li>Aprendizajes de proyectos anteriores no se documentan — cada obra repite los mismos errores</li>
           </ul>
         </div>
         <div>
           <div class="col-label green">✓ Cómo se arregla</div>
           <div class="sol-box">
-            <strong>Last Planner System + EVM semanal + cierre con lecciones</strong>
-            <p>PPC semanal, lookahead a 4 semanas con compromisos, curva S financiero-físico, CPI/SPI con alerta temprana, y acta de cierre obligatoria que alimenta el catálogo de costos y registro de riesgos para proyectos futuros similares.</p>
+            <strong>Last Planner System + EVM semanal + cierre con lecciones aprendidas</strong>
+            <p>PPC semanal, lookahead a 4 semanas con compromisos, curva S financiero-físico, CPI/SPI con alerta temprana, y acta de cierre obligatoria que alimenta el catálogo de costos y registro de riesgos para proyectos futuros.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 4 -->
+    <!-- ESTRUCTURA -->
     <div class="card">
       <div class="card-head">
-        <div class="card-head-left">
-          <span class="sec-num">04</span>
-          <span class="card-title">Estructura, PMO y Gobierno</span>
-        </div>
+        <div class="card-head-left"><span class="sec-num">04</span><span class="card-title">Estructura, PMO y Gobierno</span></div>
         <span class="badge red-b">CMM 1.0 — Crítico</span>
       </div>
       <div class="card-body">
@@ -261,16 +208,152 @@
           <ul class="prob-list">
             <li>DG saturado en decisiones tácticas — sin delegación ni capa integradora</li>
             <li>Sin PMO: la organización no puede escalar de 2 a 6 proyectos simultáneos</li>
-            <li>Decisiones ad-hoc según quién esté disponible — sin comité ni protocolo</li>
+            <li>Decisiones ad-hoc según quién esté disponible — sin comité ni protocolo de escalamiento</li>
             <li>Contraloría sin visibilidad de costos por proyecto</li>
             <li>Lecciones de proyectos anteriores no se documentan ni se consultan al iniciar uno nuevo</li>
+            <li>Esquemas de compensación informales sin política institucional</li>
           </ul>
         </div>
         <div>
           <div class="col-label green">✓ Cómo se arregla</div>
           <div class="sol-box">
             <strong>PMO + Controlling + RACI por nivel de decisión</strong>
-            <p>Establecer PMO como gobierno de portafolio, crear rol de controlling financiero (business partner para operaciones), dashboard mensual de KPIs, protocolo de escalamiento y base de conocimiento de proyectos cerrados para consulta en nuevos proyectos similares.</p>
+            <p>PMO como gobierno de portafolio, rol de controlling financiero como business partner de operaciones, dashboard mensual de KPIs, protocolo de escalamiento y base de conocimiento de proyectos cerrados para consulta en proyectos similares futuros.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INGENIERIA -->
+    <div class="card">
+      <div class="card-head">
+        <div class="card-head-left"><span class="sec-num">07</span><span class="card-title">Ingeniería y Diseño</span></div>
+        <span class="badge yellow-b">CMM 2.5 — Emergente</span>
+      </div>
+      <div class="card-body">
+        <div>
+          <div class="col-label red">× Lo que está mal</div>
+          <ul class="prob-list">
+            <li>1 sola persona genera el 100% de los planos — punto único de falla</li>
+            <li>Solo AutoCAD 2D y SketchUp — sin BIM, sin Revit, sin plataforma colaborativa</li>
+            <li>Planos se intercambian por email sin control de versiones — riesgo de construir con planos obsoletos</li>
+            <li>Disciplinas en silos: arquitectura, estructura, eléctrico e hidráulico sin coordinación entre sí</li>
+            <li>Interferencias descubiertas en campo → retrabajo y sobrecosto</li>
+            <li>Obra arranca sin ingeniería completa — especificaciones se definen sobre la marcha (3+ iteraciones por proyecto)</li>
+          </ul>
+        </div>
+        <div>
+          <div class="col-label green">✓ Cómo se arregla</div>
+          <div class="sol-box">
+            <strong>Gate "For Construction" obligatorio + DCM semanal pre-obra</strong>
+            <p>Junta semanal de coordinación entre disciplinas antes y durante la obra, checklist de entregables completos antes de arrancar construcción, control de versiones centralizado y proceso formal de Change Order. A futuro: BIM para detección automática de interferencias.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FINANCIERO -->
+    <div class="card">
+      <div class="card-head">
+        <div class="card-head-left"><span class="sec-num">03</span><span class="card-title">Panorama Financiero</span></div>
+        <span class="badge red-b">CMM 1.2 — Crítico</span>
+      </div>
+      <div class="card-body">
+        <div>
+          <div class="col-label red">× Lo que está mal</div>
+          <ul class="prob-list">
+            <li>Modelo financiero robusto al inicio, desconectado totalmente de la ejecución</li>
+            <li>Triple captura: Opus → Excel (250+ pestañas) → Odoo sin conciliación</li>
+            <li>Pre-presupuesto sobreestimado 3-4x; ejecución real al 25% de lo proyectado</li>
+            <li>Sin análisis financiero de cierre — rentabilidad real de proyectos terminados, desconocida</li>
+            <li>Contraloría excluida de visibilidad de costos por proyecto — depende de lo que Operaciones reporte</li>
+          </ul>
+        </div>
+        <div>
+          <div class="col-label green">✓ Cómo se arregla</div>
+          <div class="sol-box">
+            <strong>PIC como puente financiero-operativo</strong>
+            <p>Traducir modelo financiero en presupuesto base operativo, ligar al cronograma vía curva S, validación cruzada de pagos (factura vs. contrato/OC), EVM semanal y cierre obligatorio con cálculo real de rentabilidad y lecciones aprendidas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMERCIAL -->
+    <div class="card">
+      <div class="card-head">
+        <div class="card-head-left"><span class="sec-num">05</span><span class="card-title">Comercial y Desarrollo de Negocios</span></div>
+        <span class="badge green-b">CMM 3.0 — Fortaleza con brechas</span>
+      </div>
+      <div class="card-body">
+        <div>
+          <div class="col-label red">× Brechas a cerrar</div>
+          <ul class="prob-list">
+            <li>Sin CRM — pipeline gestionado en Excel; forecast 2026 vacío</li>
+            <li>Tasa de conversión del 13% (258K m² cerrados de 1.99M en pipeline)</li>
+            <li>Handoff a operaciones informal — sin kickoff ni brief documentado al equipo de obra</li>
+            <li>Sin análisis de win/loss — los deals perdidos no se estudian</li>
+            <li>Sin NPS ni medición de satisfacción post-entrega</li>
+          </ul>
+        </div>
+        <div>
+          <div class="col-label green">✓ Cómo se arregla</div>
+          <div class="sol-box">
+            <strong>CRM con pipeline probabilístico + kickoff formal de proyectos</strong>
+            <p>Kickoff obligatorio con checklist documentado al pasar proyecto a operaciones, post-mortem de deals perdidos, y NPS trimestral para institucionalizar el rigor comercial a escala y mejorar la tasa de conversión.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ENTREGA -->
+    <div class="card">
+      <div class="card-head">
+        <div class="card-head-left"><span class="sec-num">10</span><span class="card-title">Entrega y Calidad</span></div>
+        <span class="badge red-b">CMM 1.0 — Crítico</span>
+      </div>
+      <div class="card-body">
+        <div>
+          <div class="col-label red">× Lo que está mal</div>
+          <ul class="prob-list">
+            <li>Sin proceso formal de entrega — el traspaso de obra a cliente no está estandarizado</li>
+            <li>Sin gestión de punch list — pendientes de obra no se rastrean sistemáticamente</li>
+            <li>Sin protocolo de inspección final ni firma de conformidad del cliente</li>
+            <li>Sin As-Built — no se actualizan los planos con lo que quedó realmente construido</li>
+            <li>Sin estructura de garantía post-entrega documentada</li>
+          </ul>
+        </div>
+        <div>
+          <div class="col-label green">✓ Cómo se arregla</div>
+          <div class="sol-box">
+            <strong>Protocolo de entrega formal con As-Built y garantía</strong>
+            <p>Checklist de inspección final, gestión de punch list en sistema, entrega formal al cliente con planos As-Built, seguimiento de garantía a 12 meses y captura de lecciones aprendidas para mejorar futuros proyectos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOPORTE -->
+    <div class="card">
+      <div class="card-head">
+        <div class="card-head-left"><span class="sec-num">12</span><span class="card-title">Soporte: Finanzas, Capital Humano y TI</span></div>
+        <span class="badge red-b">CMM 1.0–1.5 — Crítico</span>
+      </div>
+      <div class="card-body">
+        <div>
+          <div class="col-label red">× Lo que está mal</div>
+          <ul class="prob-list">
+            <li><strong style="color:#adbac7">Finanzas:</strong> pre-presupuesto sobreestimado 3-4x; pagos sin control cruzado contra contrato</li>
+            <li><strong style="color:#adbac7">Capital Humano:</strong> contratos "asimilado a salario" generalizados; 50% de rotación en nuevas contrataciones en 5 meses; RH sin participación en contrataciones de Aura</li>
+            <li><strong style="color:#adbac7">TI:</strong> 32,000+ registros en sistema sin convertir en indicadores; solo 1 persona de TI dedica 15% de su tiempo a Aura; sistemas fragmentados sin plan de integración</li>
+            <li><strong style="color:#adbac7">Gobernanza:</strong> roles superpuestos; DG en decisiones tácticas; sin mecanismo de gobierno formal</li>
+          </ul>
+        </div>
+        <div>
+          <div class="col-label green">✓ Cómo se arregla</div>
+          <div class="sol-box">
+            <strong>Formalizar las áreas de soporte como habilitadores del negocio</strong>
+            <p>Política de compensación con tabulador formal, RH activo en selección y retención, roadmap de integración tecnológica (Odoo como sistema único), RACI de gobierno con autoridades de decisión por nivel y comité mensual de revisión con KPIs estandarizados.</p>
           </div>
         </div>
       </div>
@@ -300,8 +383,6 @@
   </div>
 
   <footer>London Consulting Group × Aura Desarrollos · Prediagnóstico Operativo ABR 2026 · Confidencial</footer>
-
-</div>
 
 </body>
 </html>
