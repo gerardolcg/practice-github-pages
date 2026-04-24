@@ -126,18 +126,7 @@
 </head>
 <body>
 
-<div id="password-screen">
-  <div class="pass-box">
-    <div class="tag">London Consulting Group × Aura Desarrollos</div>
-    <h2>Acceso Restringido</h2>
-    <p>Documento confidencial — solo circulación interna</p>
-    <input type="password" id="pass-input" placeholder="Clave de acceso" onkeydown="if(event.key==='Enter') checkPass()" />
-    <button onclick="checkPass()">Ingresar →</button>
-    <div class="pass-error" id="pass-error">Clave incorrecta</div>
-  </div>
-</div>
-
-<div id="main">
+<div id="main" style="display:block">
 
   <header>
     <div class="header-left">
@@ -314,16 +303,5 @@
 
 </div>
 
-<script>
-  function checkPass() {
-    const val = document.getElementById('pass-input').value;
-    if (val === 'aura2026') {
-      document.getElementById('password-screen').style.display = 'none';
-      document.getElementById('main').style.display = 'block';
-    } else {
-      document.getElementById('pass-error').style.display = 'block';
-    }
-  }
-</script>
 </body>
 </html>
