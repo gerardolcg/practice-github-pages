@@ -200,6 +200,117 @@
           </div>
         </div>
       </div>
+
+      <!-- CURVA S VISUAL -->
+      <div style="padding:0 20px 20px;">
+        <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:20px;">
+          <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#2d8c4e;margin-bottom:4px;">Herramienta de control</div>
+          <div style="font-size:0.9rem;font-weight:600;color:#1a202c;margin-bottom:4px;">Curva S + Semáforos — así debería verse cada proyecto</div>
+          <div style="font-size:0.78rem;color:#718096;margin-bottom:16px;">Compara el avance planeado vs el avance real. La distancia entre ambas líneas indica si el proyecto está en riesgo.</div>
+
+          <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start;">
+
+            <!-- CHART -->
+            <svg viewBox="0 0 540 260" style="flex:1;min-width:280px;max-width:480px;" xmlns="http://www.w3.org/2000/svg">
+              <!-- Grid lines -->
+              <line x1="55" y1="20"  x2="525" y2="20"  stroke="#e2e8f0" stroke-width="1"/>
+              <line x1="55" y1="77"  x2="525" y2="77"  stroke="#e2e8f0" stroke-width="1"/>
+              <line x1="55" y1="135" x2="525" y2="135" stroke="#e2e8f0" stroke-width="1"/>
+              <line x1="55" y1="192" x2="525" y2="192" stroke="#e2e8f0" stroke-width="1"/>
+              <line x1="55" y1="250" x2="525" y2="250" stroke="#e2e8f0" stroke-width="1"/>
+
+              <!-- Y axis labels -->
+              <text x="48" y="24"  text-anchor="end" font-size="10" fill="#a0aec0">100%</text>
+              <text x="48" y="81"  text-anchor="end" font-size="10" fill="#a0aec0">75%</text>
+              <text x="48" y="139" text-anchor="end" font-size="10" fill="#a0aec0">50%</text>
+              <text x="48" y="196" text-anchor="end" font-size="10" fill="#a0aec0">25%</text>
+              <text x="48" y="254" text-anchor="end" font-size="10" fill="#a0aec0">0%</text>
+
+              <!-- X axis labels -->
+              <text x="94"  y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M1</text>
+              <text x="133" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M2</text>
+              <text x="172" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M3</text>
+              <text x="211" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M4</text>
+              <text x="250" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M5</text>
+              <text x="289" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M6</text>
+              <text x="328" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M7</text>
+              <text x="367" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M8</text>
+              <text x="406" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M9</text>
+              <text x="445" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M10</text>
+              <text x="484" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M11</text>
+              <text x="523" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M12</text>
+
+              <!-- Shaded gap area -->
+              <polygon points="55,250 94,247 133,242 172,228 211,204 250,173 289,142 328,107 367,250 328,250 289,250 250,250 211,250 172,250 133,250 94,250" fill="rgba(197,48,48,0.06)"/>
+
+              <!-- Planned S-curve (teal) -->
+              <polyline
+                points="55,250 94,247 133,242 172,228 211,204 250,173 289,142 328,107 367,77 406,52 445,35 484,25 523,20"
+                fill="none" stroke="#2d8c4e" stroke-width="2.5" stroke-linejoin="round"/>
+
+              <!-- Actual line (red, only to M8) -->
+              <polyline
+                points="55,250 94,248 133,245 172,235 211,217 250,192 289,165 328,138 367,113"
+                fill="none" stroke="#c53030" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="6,3"/>
+
+              <!-- Current point marker -->
+              <circle cx="367" cy="113" r="5" fill="#c53030"/>
+              <line x1="367" y1="20" x2="367" y2="250" stroke="#c53030" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+
+              <!-- Gap label -->
+              <text x="380" y="93"  font-size="9" fill="#c53030" font-weight="600">Real: 62%</text>
+              <text x="380" y="105" font-size="9" fill="#c53030">Planeado: 83%</text>
+              <text x="380" y="117" font-size="9" fill="#c53030">Gap: −21%</text>
+
+              <!-- Legend -->
+              <line x1="58" y1="14" x2="80" y2="14" stroke="#2d8c4e" stroke-width="2.5"/>
+              <text x="84" y="18" font-size="9" fill="#4a5568">Planeado</text>
+              <line x1="130" y1="14" x2="152" y2="14" stroke="#c53030" stroke-width="2.5" stroke-dasharray="4,2"/>
+              <text x="156" y="18" font-size="9" fill="#4a5568">Real</text>
+            </svg>
+
+            <!-- SEMAFOROS -->
+            <div style="display:flex;flex-direction:column;gap:10px;min-width:160px;">
+              <div style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#718096;margin-bottom:2px;">Semáforos del proyecto</div>
+
+              <div style="background:#fff;border:1px solid #fed7d7;border-radius:8px;padding:10px 14px;display:flex;align-items:center;gap:10px;">
+                <div style="width:12px;height:12px;border-radius:50%;background:#c53030;flex-shrink:0;box-shadow:0 0 6px rgba(197,48,48,0.5);"></div>
+                <div>
+                  <div style="font-size:0.78rem;font-weight:600;color:#1a202c;">Avance físico</div>
+                  <div style="font-size:0.72rem;color:#718096;">21% por debajo del plan</div>
+                </div>
+              </div>
+
+              <div style="background:#fff;border:1px solid #fed7d7;border-radius:8px;padding:10px 14px;display:flex;align-items:center;gap:10px;">
+                <div style="width:12px;height:12px;border-radius:50%;background:#c53030;flex-shrink:0;box-shadow:0 0 6px rgba(197,48,48,0.5);"></div>
+                <div>
+                  <div style="font-size:0.78rem;font-weight:600;color:#1a202c;">Costo vs presupuesto</div>
+                  <div style="font-size:0.72rem;color:#718096;">Desviación no medida</div>
+                </div>
+              </div>
+
+              <div style="background:#fff;border:1px solid #fbd38d;border-radius:8px;padding:10px 14px;display:flex;align-items:center;gap:10px;">
+                <div style="width:12px;height:12px;border-radius:50%;background:#d69e2e;flex-shrink:0;box-shadow:0 0 6px rgba(214,158,46,0.5);"></div>
+                <div>
+                  <div style="font-size:0.78rem;font-weight:600;color:#1a202c;">Plazo de entrega</div>
+                  <div style="font-size:0.72rem;color:#718096;">En riesgo de retraso</div>
+                </div>
+              </div>
+
+              <div style="background:#fff;border:1px solid #9ae6b4;border-radius:8px;padding:10px 14px;display:flex;align-items:center;gap:10px;">
+                <div style="width:12px;height:12px;border-radius:50%;background:#2d8c4e;flex-shrink:0;box-shadow:0 0 6px rgba(45,140,78,0.4);"></div>
+                <div>
+                  <div style="font-size:0.78rem;font-weight:600;color:#1a202c;">Calidad</div>
+                  <div style="font-size:0.72rem;color:#718096;">Sin incidentes reportados</div>
+                </div>
+              </div>
+
+              <div style="font-size:0.72rem;color:#a0aec0;margin-top:4px;line-height:1.5;">Con esta herramienta el Director General ve el estado de todos los proyectos en 30 segundos.</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- ESTRUCTURA -->
