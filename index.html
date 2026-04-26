@@ -8,18 +8,12 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Segoe UI', sans-serif; background: #f5f7fa; color: #1a202c; min-height: 100vh; }
 
-    header {
-      background: #1a2332; border-bottom: 1px solid #243044;
-      padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
-    }
+    header { background: #1a2332; border-bottom: 1px solid #243044; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
     .header-left { display: flex; align-items: center; gap: 14px; }
     .brand-tag { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #8b9ab0; }
     .brand-name { font-size: 1rem; font-weight: 700; color: #ffffff; }
     .divider-v { width: 1px; height: 30px; background: #2d3f55; }
-    .confidential {
-      font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #e05252;
-      background: rgba(224,82,82,0.12); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(224,82,82,0.3);
-    }
+    .confidential { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #e05252; background: rgba(224,82,82,0.12); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(224,82,82,0.3); }
 
     .hero { padding: 48px 40px 28px; max-width: 1060px; margin: 0 auto; }
     .hero-tag { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #2d8c4e; margin-bottom: 10px; }
@@ -27,550 +21,597 @@
     .hero p { font-size: 0.9rem; color: #4a5568; max-width: 660px; line-height: 1.65; }
 
     .stats { max-width: 1060px; margin: 0 auto 36px; padding: 0 40px; display: flex; gap: 14px; flex-wrap: wrap; }
-    .stat { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px 20px; flex: 1; min-width: 120px; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+    .stat { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px 20px; flex: 1; min-width: 120px; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
     .stat .num { font-size: 1.5rem; font-weight: 700; }
-    .stat .num.red { color: #c53030; }
-    .stat .num.green { color: #2d8c4e; }
-    .stat .num.yellow { color: #b7791f; }
+    .stat .num.red { color: #c53030; } .stat .num.green { color: #2d8c4e; } .stat .num.yellow { color: #b7791f; }
     .stat .lbl { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #718096; margin-top: 3px; }
 
+    .section-wrap { max-width: 1060px; margin: 0 auto; padding: 0 40px 48px; }
+    .section-tag { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #2d8c4e; margin-bottom: 10px; }
+    .section-title { font-size: 1.3rem; font-weight: 700; color: #1a202c; margin-bottom: 6px; }
+    .section-sub { font-size: 0.85rem; color: #4a5568; margin-bottom: 24px; line-height: 1.6; }
+
+    /* CARDS */
     .cards { max-width: 1060px; margin: 0 auto; padding: 0 40px 48px; display: flex; flex-direction: column; gap: 18px; }
-
-    .card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
-
-    .card-head {
-      padding: 16px 20px 14px; display: flex; align-items: center;
-      justify-content: space-between; border-bottom: 1px solid #e2e8f0; flex-wrap: wrap; gap: 8px;
-      background: #f8fafc;
-    }
+    .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
+    .card-head { padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #e2e8f0; flex-wrap: wrap; gap: 8px; background: #f8fafc; }
     .card-head-left { display: flex; align-items: center; gap: 10px; }
     .sec-num { font-size: 10px; font-weight: 700; letter-spacing: 2px; color: #a0aec0; }
     .card-title { font-size: 0.95rem; font-weight: 600; color: #1a202c; }
     .badge { font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; white-space: nowrap; }
-    .red-b   { background: #fff5f5; color: #c53030; border: 1px solid #fed7d7; }
-    .yellow-b{ background: #fffbeb; color: #b7791f; border: 1px solid #fbd38d; }
+    .red-b { background: #fff5f5; color: #c53030; border: 1px solid #fed7d7; }
+    .yellow-b { background: #fffbeb; color: #b7791f; border: 1px solid #fbd38d; }
     .green-b { background: #f0fff4; color: #2d8c4e; border: 1px solid #9ae6b4; }
 
+    /* BULLET CARD BODY */
     .card-body { padding: 16px 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-
     .col-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
-    .col-label.red   { color: #c53030; }
-    .col-label.green { color: #2d8c4e; }
-
+    .col-label.red { color: #c53030; } .col-label.green { color: #2d8c4e; }
     .prob-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
     .prob-list li { font-size: 0.81rem; color: #4a5568; padding-left: 14px; position: relative; line-height: 1.5; }
     .prob-list li::before { content: '×'; position: absolute; left: 0; color: #c53030; font-weight: 700; }
-
     .sol-box { background: #f0fff4; border: 1px solid #9ae6b4; border-radius: 8px; padding: 12px 14px; }
     .sol-box strong { font-size: 0.8rem; color: #2d8c4e; display: block; margin-bottom: 6px; }
     .sol-box p { font-size: 0.81rem; color: #2d3748; line-height: 1.6; }
 
+    /* COMPARISON TABLE */
+    .comp-wrap { display: grid; grid-template-columns: 1fr 1fr; }
+    .comp-col { display: flex; flex-direction: column; }
+    .comp-col-head { padding: 10px 16px; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+    .comp-col-head.good { background: #2d6a4f; color: #fff; }
+    .comp-col-head.bad { background: #c53030; color: #fff; }
+    .comp-row { display: flex; gap: 10px; padding: 10px 16px; border-bottom: 1px solid #e2e8f0; align-items: flex-start; }
+    .comp-row:last-child { border-bottom: none; }
+    .comp-row.good-row { background: #f8fffa; }
+    .comp-row.bad-row { background: #fff8f8; }
+    .comp-lbl { font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; min-width: 80px; padding-top: 2px; }
+    .comp-lbl.g { color: #2d8c4e; } .comp-lbl.r { color: #c53030; }
+    .comp-text { font-size: 0.79rem; color: #4a5568; line-height: 1.5; }
+    .comp-text.bad { color: #742a2a; }
+    .comp-icon { font-size: 0.75rem; font-weight: 700; margin-right: 4px; }
+
+    /* IMPACT */
     .impact { max-width: 1060px; margin: 0 auto; padding: 0 40px 48px; }
     .impact h2 { font-size: 1rem; font-weight: 600; color: #1a202c; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0; }
     .impact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-    .impact-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+    .impact-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
     .impact-card .sce { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #718096; margin-bottom: 6px; }
     .impact-card .amt { font-size: 1.6rem; font-weight: 700; margin-bottom: 4px; }
     .impact-card .roi { font-size: 0.78rem; color: #718096; }
-    .c1 .amt { color: #b7791f; } .c2 .amt { color: #2d8c4e; } .c3 .amt { color: #276749; }
+    .c2 .amt { color: #2d8c4e; } .c3 .amt { color: #276749; }
 
     footer { border-top: 1px solid #e2e8f0; padding: 20px 40px; text-align: center; font-size: 0.72rem; color: #a0aec0; }
 
-    @media (max-width: 680px) {
-      header, .hero, .stats, .cards, .impact { padding-left: 16px; padding-right: 16px; }
+    @media (max-width: 700px) {
+      header, .hero, .stats, .cards, .section-wrap, .impact { padding-left: 16px; padding-right: 16px; }
       .hero h1 { font-size: 1.4rem; }
-      .card-body { grid-template-columns: 1fr; }
+      .card-body, .comp-wrap { grid-template-columns: 1fr; }
       .impact-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="header-left">
+<header>
+  <div class="header-left">
+    <div>
+      <div class="brand-tag">London Consulting Group</div>
+      <div class="brand-name">Aura Desarrollos</div>
+    </div>
+    <div class="divider-v"></div>
+    <div style="font-size:0.8rem;color:#8b9ab0;">Prediagnóstico Operativo · ABR 2026</div>
+  </div>
+  <div class="confidential">Confidencial</div>
+</header>
+
+<div class="hero">
+  <div class="hero-tag">Diagnóstico de Madurez Operativa — 13 Pilares</div>
+  <h1>Áreas de Oportunidad y<br>Plan de Transformación</h1>
+  <p>CMM promedio actual <strong style="color:#c53030">1.5 / 5.0</strong> — Meta <strong style="color:#2d8c4e">3.0 / 5.0</strong>. Evaluación completa con <strong>50 oportunidades identificadas</strong>, 19 entrevistas y 13 pilares analizados. Ahorro potencial estimado en <strong style="color:#276749">$36.8M MXN</strong> en escenario conservador.</p>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="num red">1.5</div><div class="lbl">CMM Promedio</div></div>
+  <div class="stat"><div class="num red">50</div><div class="lbl">Oportunidades</div></div>
+  <div class="stat"><div class="num yellow">19</div><div class="lbl">Entrevistas</div></div>
+  <div class="stat"><div class="num yellow">13</div><div class="lbl">Pilares</div></div>
+  <div class="stat"><div class="num green">$36.8M</div><div class="lbl">Ahorro estimado MXN</div></div>
+</div>
+
+<!-- 5 ÁREAS DE INTERVENCIÓN -->
+<div class="section-wrap">
+  <div class="section-tag">Conclusiones del Levantamiento</div>
+  <div class="section-title">Cinco Áreas de Intervención</div>
+  <div class="section-sub">Alineadas con las expectativas del proyecto E1–E5. Estas cinco áreas concentran el 90% del impacto potencial de la transformación.</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;">
+
+    <div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:18px;border-left:4px solid #c53030;box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+        <div style="background:#c53030;color:#fff;font-size:0.85rem;font-weight:700;width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;">1</div>
+        <div style="font-size:9px;color:#a0aec0;letter-spacing:1px;text-transform:uppercase;">E2 · E3</div>
+      </div>
+      <div style="font-size:0.88rem;font-weight:600;color:#1a202c;margin-bottom:6px;">Falta de control presupuestal y PIC</div>
+      <div style="font-size:0.78rem;color:#4a5568;line-height:1.55;">Sin Presupuesto Interno de Control, sin CBS, sin SOW, sin comparación presupuesto vs real durante ejecución.</div>
+    </div>
+
+    <div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:18px;border-left:4px solid #c53030;box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+        <div style="background:#c53030;color:#fff;font-size:0.85rem;font-weight:700;width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;">2</div>
+        <div style="font-size:9px;color:#a0aec0;letter-spacing:1px;text-transform:uppercase;">E3 · E5</div>
+      </div>
+      <div style="font-size:0.88rem;font-weight:600;color:#1a202c;margin-bottom:6px;">Innovación en ingeniería y diseño</div>
+      <div style="font-size:0.78rem;color:#4a5568;line-height:1.55;">Sistematizar los ahorros de ingeniería de valor. Convertir lo heroico en repetible con sesiones DCM y análisis de alternativas formales.</div>
+    </div>
+
+    <div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:18px;border-left:4px solid #c53030;box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+        <div style="background:#c53030;color:#fff;font-size:0.85rem;font-weight:700;width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;">3</div>
+        <div style="font-size:9px;color:#a0aec0;letter-spacing:1px;text-transform:uppercase;">E2 · E3</div>
+      </div>
+      <div style="font-size:0.88rem;font-weight:600;color:#1a202c;margin-bottom:6px;">Planeación de obra y proceso de compras</div>
+      <div style="font-size:0.78rem;color:#4a5568;line-height:1.55;">Sin programa maestro ni plan de materiales. Implementar secuencia constructiva, sourcing estratégico y contratos marco.</div>
+    </div>
+
+    <div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:18px;border-left:4px solid #b7791f;box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+        <div style="background:#b7791f;color:#fff;font-size:0.85rem;font-weight:700;width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;">4</div>
+        <div style="font-size:9px;color:#a0aec0;letter-spacing:1px;text-transform:uppercase;">E1</div>
+      </div>
+      <div style="font-size:0.88rem;font-weight:600;color:#1a202c;margin-bottom:6px;">Estructura, gobernanza y toma de decisiones</div>
+      <div style="font-size:0.78rem;color:#4a5568;line-height:1.55;">Definir estructura, tramo de control, delegación y mecanismos de gobierno para que la organización funcione como sistema.</div>
+    </div>
+
+    <div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:18px;border-left:4px solid #b7791f;box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+        <div style="background:#b7791f;color:#fff;font-size:0.85rem;font-weight:700;width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;">5</div>
+        <div style="font-size:9px;color:#a0aec0;letter-spacing:1px;text-transform:uppercase;">E4</div>
+      </div>
+      <div style="font-size:0.88rem;font-weight:600;color:#1a202c;margin-bottom:6px;">Digitalización punta a punta</div>
+      <div style="font-size:0.78rem;color:#4a5568;line-height:1.55;">32,000+ registros sin convertir en indicadores. Triple captura. Sin BIM. Falta un plan de digitalización que conecte presupuesto, compras, obra y finanzas.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CARDS DE PROBLEMAS -->
+<div class="cards">
+
+  <!-- PLANEACIÓN — TABLA COMPARATIVA -->
+  <div class="card">
+    <div class="card-head">
+      <div class="card-head-left"><span class="sec-num">06</span><span class="card-title">Planeación y Presupuesto</span></div>
+      <span class="badge red-b">CMM 1.2 — Crítico</span>
+    </div>
+    <div class="comp-wrap">
+      <div class="comp-col">
+        <div class="comp-col-head good">✓ Cómo debería funcionar</div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Inicio</span><span class="comp-text">Target Value Delivery — el costo objetivo define el diseño antes de diseñar</span></div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Estructura</span><span class="comp-text">CBS estándar con catálogo base de precios unitarios por disciplina</span></div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Alcance</span><span class="comp-text">SOW formal por disciplina — qué incluye, qué excluye, supuestos documentados</span></div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Validación</span><span class="comp-text">Compras cruza CBS contra cotizaciones reales de proveedores</span></div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Control</span><span class="comp-text">PIC como línea base aprobada — referencia para medir toda desviación</span></div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Seguimiento</span><span class="comp-text">EVM semanal: CPI y SPI calculados con corte contra el PIC</span></div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Cierre</span><span class="comp-text">Rentabilidad real calculada y lecciones aprendidas al catálogo</span></div>
+      </div>
+      <div class="comp-col">
+        <div class="comp-col-head bad">× Qué hace Aura hoy</div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Inicio</span><span class="comp-text bad">Se diseña primero, se presupuesta después — el costo no guía el diseño</span></div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Estructura</span><span class="comp-text bad">Sin CBS — cada proyecto empieza de cero sin catálogo de referencia</span></div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Alcance</span><span class="comp-text bad">Sin SOW — alcances no documentados, supuestos no registrados</span></div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Validación</span><span class="comp-text bad">Compras excluido de presupuestación — sin validación de precios de mercado</span></div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Control</span><span class="comp-text bad">Sin PIC — triple captura: Opus → Excel (250 pestañas) → Odoo sin conciliación</span></div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Seguimiento</span><span class="comp-text bad">Sin EVM — desviaciones detectadas meses tarde: vialidades +$11.4M, eléctrica +$3.3M</span></div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Cierre</span><span class="comp-text bad">Sin cierre financiero — rentabilidad real de proyectos terminados desconocida</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPRAS — TABLA COMPARATIVA -->
+  <div class="card">
+    <div class="card-head">
+      <div class="card-head-left"><span class="sec-num">08</span><span class="card-title">Compras y Abastecimiento</span></div>
+      <span class="badge red-b">CMM 1.0 — Crítico</span>
+    </div>
+    <div class="comp-wrap">
+      <div class="comp-col">
+        <div class="comp-col-head good">✓ Cómo debería funcionar</div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Planeación</span><span class="comp-text">Plan de materiales vinculado al cronograma — saber qué se necesita y cuándo</span></div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Categorización</span><span class="comp-text">Matriz Kraljic — estratégicos, apalancados, cuello de botella, rutinarios</span></div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Cotización</span><span class="comp-text">Mínimo 3 cotizaciones formales por monto — criterios ponderados</span></div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Selección</span><span class="comp-text">Evaluación multi-criterio: precio + calidad + plazo + track record</span></div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Contratación</span><span class="comp-text">Contratos marco anuales con proveedores Pareto top 15</span></div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Evaluación</span><span class="comp-text">Plantilla de desempeño post-proyecto: tiempo, calidad y precio registrados</span></div>
+      </div>
+      <div class="comp-col">
+        <div class="comp-col-head bad">× Qué hace Aura hoy</div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Planeación</span><span class="comp-text bad">Sin plan — 92% de OCs ($130.5M) procesadas como urgencia. Compras no sabe qué viene ni cuándo</span></div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Categorización</span><span class="comp-text bad">Sin categorización — una OC de $50K y una de $5M siguen el mismo proceso</span></div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Cotización</span><span class="comp-text bad">Se omite — proveedor llega pre-asignado desde Operaciones. Compras solo tramita</span></div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Selección</span><span class="comp-text bad">Sin evaluación formal — cuando sí se cotiza el ahorro es hasta 64% (caso luminarias)</span></div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Contratación</span><span class="comp-text bad">13 proveedores concentran 80% del gasto ($124M) sin contrato. GCC: $1M anticipo sin contrato</span></div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Evaluación</span><span class="comp-text bad">436 proveedores sin calificación — un proveedor que falla sigue recibiendo órdenes</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EJECUCIÓN — TABLA COMPARATIVA -->
+  <div class="card">
+    <div class="card-head">
+      <div class="card-head-left"><span class="sec-num">09</span><span class="card-title">Ejecución y Control de Obra</span></div>
+      <span class="badge red-b">CMM 1.1 — Crítico</span>
+    </div>
+    <div class="comp-wrap">
+      <div class="comp-col">
+        <div class="comp-col-head good">✓ Cómo debería funcionar</div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Planeación</span><span class="comp-text">Programa Maestro con baseline aprobado — secuencia constructiva formal</span></div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Supervisión</span><span class="comp-text">Corte semanal estandarizado — avance físico por partida y contratista</span></div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Control</span><span class="comp-text">EVM: comparación SPI + CPI contra presupuesto en tiempo real</span></div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Dashboard</span><span class="comp-text">Curva S + Semáforos — alertas automáticas de desviación</span></div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Dirección</span><span class="comp-text">Junta de Control semanal con decisiones basadas en datos</span></div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Reporte</span><span class="comp-text">Un solo reporte unificado para Dirección y Banco</span></div>
+      </div>
+      <div class="comp-col">
+        <div class="comp-col-head bad">× Qué hace Aura hoy</div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Planeación</span><span class="comp-text bad">Programa Maestro: NO EXISTE. Actividades según disponibilidad, no ruta crítica</span></div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Supervisión</span><span class="comp-text bad">Corte informal por WhatsApp — sin formato, sin partidas, sin trazabilidad</span></div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Control</span><span class="comp-text bad">Sin EVM — $14.7M en desviaciones no detectadas por la organización</span></div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Dashboard</span><span class="comp-text bad">Dashboard: NO EXISTE — 4 flujos paralelos que no se integran</span></div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Dirección</span><span class="comp-text bad">8 de 13 proyectos con retraso · $22.2M en sobrecostos · 12 de 13 en un solo equipo</span></div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Reporte</span><span class="comp-text bad">Reporte al banco se infla +2% — múltiples versiones, ninguna es la verdad</span></div>
+      </div>
+    </div>
+
+    <!-- CURVA S VISUAL -->
+    <div style="padding:16px 20px;border-top:1px solid #e2e8f0;background:#fafafa;">
+      <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#2d8c4e;margin-bottom:12px;">Herramienta de control — Curva S + Semáforos</div>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start;">
+        <svg viewBox="0 0 540 260" style="flex:1;min-width:260px;max-width:460px;" xmlns="http://www.w3.org/2000/svg">
+          <line x1="55" y1="20" x2="525" y2="20" stroke="#e2e8f0" stroke-width="1"/>
+          <line x1="55" y1="77" x2="525" y2="77" stroke="#e2e8f0" stroke-width="1"/>
+          <line x1="55" y1="135" x2="525" y2="135" stroke="#e2e8f0" stroke-width="1"/>
+          <line x1="55" y1="192" x2="525" y2="192" stroke="#e2e8f0" stroke-width="1"/>
+          <line x1="55" y1="250" x2="525" y2="250" stroke="#e2e8f0" stroke-width="1"/>
+          <text x="48" y="24" text-anchor="end" font-size="10" fill="#a0aec0">100%</text>
+          <text x="48" y="81" text-anchor="end" font-size="10" fill="#a0aec0">75%</text>
+          <text x="48" y="139" text-anchor="end" font-size="10" fill="#a0aec0">50%</text>
+          <text x="48" y="196" text-anchor="end" font-size="10" fill="#a0aec0">25%</text>
+          <text x="48" y="254" text-anchor="end" font-size="10" fill="#a0aec0">0%</text>
+          <text x="94" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M1</text>
+          <text x="172" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M3</text>
+          <text x="250" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M5</text>
+          <text x="328" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M7</text>
+          <text x="406" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M9</text>
+          <text x="484" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M11</text>
+          <polyline points="55,250 94,247 133,242 172,228 211,204 250,173 289,142 328,107 367,77 406,52 445,35 484,25 523,20" fill="none" stroke="#2d8c4e" stroke-width="2.5" stroke-linejoin="round"/>
+          <polyline points="55,250 94,248 133,245 172,235 211,217 250,192 289,165 328,138 367,113" fill="none" stroke="#c53030" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="6,3"/>
+          <circle cx="367" cy="113" r="5" fill="#c53030"/>
+          <line x1="367" y1="20" x2="367" y2="250" stroke="#c53030" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+          <text x="380" y="93" font-size="9" fill="#c53030" font-weight="600">Real: 62%</text>
+          <text x="380" y="105" font-size="9" fill="#c53030">Planeado: 83%</text>
+          <text x="380" y="117" font-size="9" fill="#c53030">Gap: −21%</text>
+          <line x1="58" y1="14" x2="80" y2="14" stroke="#2d8c4e" stroke-width="2.5"/>
+          <text x="84" y="18" font-size="9" fill="#4a5568">Planeado</text>
+          <line x1="130" y1="14" x2="152" y2="14" stroke="#c53030" stroke-width="2.5" stroke-dasharray="4,2"/>
+          <text x="156" y="18" font-size="9" fill="#4a5568">Real</text>
+        </svg>
+        <div style="display:flex;flex-direction:column;gap:8px;min-width:150px;">
+          <div style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#718096;margin-bottom:2px;">Semáforos del proyecto</div>
+          <div style="background:#fff;border:1px solid #fed7d7;border-radius:8px;padding:9px 12px;display:flex;align-items:center;gap:9px;">
+            <div style="width:11px;height:11px;border-radius:50%;background:#c53030;flex-shrink:0;"></div>
+            <div><div style="font-size:0.77rem;font-weight:600;color:#1a202c;">Avance físico</div><div style="font-size:0.7rem;color:#718096;">21% bajo del plan</div></div>
+          </div>
+          <div style="background:#fff;border:1px solid #fed7d7;border-radius:8px;padding:9px 12px;display:flex;align-items:center;gap:9px;">
+            <div style="width:11px;height:11px;border-radius:50%;background:#c53030;flex-shrink:0;"></div>
+            <div><div style="font-size:0.77rem;font-weight:600;color:#1a202c;">Costo vs presupuesto</div><div style="font-size:0.7rem;color:#718096;">Desviación no medida</div></div>
+          </div>
+          <div style="background:#fff;border:1px solid #fbd38d;border-radius:8px;padding:9px 12px;display:flex;align-items:center;gap:9px;">
+            <div style="width:11px;height:11px;border-radius:50%;background:#d69e2e;flex-shrink:0;"></div>
+            <div><div style="font-size:0.77rem;font-weight:600;color:#1a202c;">Plazo de entrega</div><div style="font-size:0.7rem;color:#718096;">En riesgo de retraso</div></div>
+          </div>
+          <div style="background:#fff;border:1px solid #9ae6b4;border-radius:8px;padding:9px 12px;display:flex;align-items:center;gap:9px;">
+            <div style="width:11px;height:11px;border-radius:50%;background:#2d8c4e;flex-shrink:0;"></div>
+            <div><div style="font-size:0.77rem;font-weight:600;color:#1a202c;">Calidad</div><div style="font-size:0.7rem;color:#718096;">Sin incidentes reportados</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INGENIERÍA — TABLA COMPARATIVA -->
+  <div class="card">
+    <div class="card-head">
+      <div class="card-head-left"><span class="sec-num">07</span><span class="card-title">Ingeniería y Diseño</span></div>
+      <span class="badge yellow-b">CMM 2.5 — Emergente</span>
+    </div>
+    <div class="comp-wrap">
+      <div class="comp-col">
+        <div class="comp-col-head good">✓ Cómo debería funcionar</div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Kick-off</span><span class="comp-text">Sesión de arranque — todas las disciplinas alineadas en alcance y plazos</span></div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Bases</span><span class="comp-text">Bases de diseño documentadas por disciplina: normas, cargas, especificaciones</span></div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Diseño</span><span class="comp-text">Modelo integrado (BIM) con control de versiones y colaboración simultánea</span></div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Coordinación</span><span class="comp-text">DCM semanal — revisión cruzada entre disciplinas antes y durante obra</span></div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Validación</span><span class="comp-text">Clash detection — interferencias detectadas en modelo antes de construir</span></div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Aprobación</span><span class="comp-text">Paquete "For Construction" completo y aprobado antes de arrancar obra</span></div>
+        <div class="comp-row good-row"><span class="comp-lbl g">Cierre</span><span class="comp-text">Planos As-Built actualizados entregados al cliente al terminar</span></div>
+      </div>
+      <div class="comp-col">
+        <div class="comp-col-head bad">× Qué hace Aura hoy</div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Kick-off</span><span class="comp-text bad">Sin sesión formal — cada disciplina arranca por separado sin coordinación</span></div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Bases</span><span class="comp-text bad">Sin bases de diseño documentadas — criterios verbales o implícitos</span></div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Diseño</span><span class="comp-text bad">Solo AutoCAD 2D + SketchUp — sin BIM, sin control de versiones, planos por email</span></div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Coordinación</span><span class="comp-text bad">Sin DCM — disciplinas en silos. 1 persona genera el 100% de los planos</span></div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Validación</span><span class="comp-text bad">Sin clash detection — interferencias descubiertas en campo → retrabajo y sobrecosto</span></div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Aprobación</span><span class="comp-text bad">Obra arranca sin ingeniería completa — 3+ iteraciones por proyecto. $40M ahorros ad-hoc no sistematizados</span></div>
+        <div class="comp-row bad-row"><span class="comp-lbl r">Cierre</span><span class="comp-text bad">Sin As-Built — no se actualizan los planos con lo realmente construido</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ESTRUCTURA Y PMO -->
+  <div class="card">
+    <div class="card-head">
+      <div class="card-head-left"><span class="sec-num">04</span><span class="card-title">Estructura, PMO y Gobierno</span></div>
+      <span class="badge red-b">CMM 1.0 — Crítico</span>
+    </div>
+    <div class="card-body">
       <div>
-        <div class="brand-tag">London Consulting Group</div>
-        <div class="brand-name">Aura Desarrollos</div>
+        <div class="col-label red">× Lo que está mal</div>
+        <ul class="prob-list">
+          <li>DG saturado en decisiones tácticas — sin delegación ni capa integradora</li>
+          <li>Sin PMO — la organización no puede escalar de 2 a 6 proyectos simultáneos</li>
+          <li>Decisiones ad-hoc según quién esté disponible — sin comité ni protocolo de escalamiento</li>
+          <li>Contraloría sin visibilidad de costos por proyecto</li>
+          <li>Lecciones de proyectos anteriores no se documentan ni consultan al iniciar uno nuevo</li>
+          <li>Esquemas de compensación informales sin política institucional</li>
+        </ul>
       </div>
-      <div class="divider-v"></div>
-      <div style="font-size:0.8rem;color:#8b949e;">Prediagnóstico Operativo · ABR 2026</div>
-    </div>
-    <div class="confidential">Confidencial</div>
-  </header>
-
-  <div class="hero">
-    <div class="hero-tag">Diagnóstico de Madurez Operativa — 13 Pilares</div>
-    <h1>Áreas de Oportunidad y<br>Plan de Transformación</h1>
-    <p>CMM promedio actual <strong style="color:#f85149">1.5 / 5.0</strong> — Meta <strong style="color:#2ea043">3.0 / 5.0</strong>. Evaluación completa de la cadena de valor con <strong style="color:#e6edf3">50 oportunidades identificadas</strong> y un potencial de ahorro de <strong style="color:#3fb950">$50–100M</strong> sobre un portafolio proyectado de $1B+ en 3 años.</p>
-  </div>
-
-  <div class="stats">
-    <div class="stat"><div class="num red">1.5</div><div class="lbl">CMM Promedio</div></div>
-    <div class="stat"><div class="num red">50</div><div class="lbl">Oportunidades</div></div>
-    <div class="stat"><div class="num yellow">19</div><div class="lbl">Entrevistas</div></div>
-    <div class="stat"><div class="num yellow">13</div><div class="lbl">Pilares</div></div>
-    <div class="stat"><div class="num green">$50–100M</div><div class="lbl">Ahorro Potencial</div></div>
-  </div>
-
-  <div class="cards">
-
-    <!-- PLANEACION -->
-    <div class="card">
-      <div class="card-head">
-        <div class="card-head-left"><span class="sec-num">06</span><span class="card-title">Planeación y Presupuesto</span></div>
-        <span class="badge red-b">CMM 1.2 — Crítico</span>
-      </div>
-      <div class="card-body">
-        <div>
-          <div class="col-label red">× Lo que está mal</div>
-          <ul class="prob-list">
-            <li>Sin PIC — sin línea base presupuestal para controlar durante ejecución</li>
-            <li>Sin CBS ni SOW — cada proyecto empieza desde cero</li>
-            <li>Sin TVD — se diseña primero, se presupuesta después</li>
-            <li>Compras excluido: sin validación de precios de mercado</li>
-            <li>Triple captura: Opus → Excel (250 pestañas) → Odoo sin conciliación</li>
-            <li>Desviaciones detectadas tarde: vialidades +$11.4M, eléctrica +$3.3M</li>
-          </ul>
-        </div>
-        <div>
-          <div class="col-label green">✓ Cómo se arregla</div>
-          <div class="sol-box">
-            <strong>Ciclo integrado: TVD → CBS → SOW → PIC → EVM → Cierre</strong>
-            <p>Catálogo base de precios unitarios, validación cruzada con Compras, EVM con corte semanal (CPI/SPI), y cierre financiero obligatorio con lecciones aprendidas al catálogo para futuros proyectos. Un solo flujo, una sola verdad.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- COMPRAS -->
-    <div class="card">
-      <div class="card-head">
-        <div class="card-head-left"><span class="sec-num">08</span><span class="card-title">Compras y Abastecimiento</span></div>
-        <span class="badge red-b">CMM 1.0 — Crítico</span>
-      </div>
-      <div class="card-body">
-        <div>
-          <div class="col-label red">× Lo que está mal</div>
-          <ul class="prob-list">
-            <li>Compras no compra — solo tramita lo que Operaciones ya decidió. El proveedor llega pre-asignado, sin cotizar ni comparar</li>
-            <li>92% de las órdenes de compra ($130.5M) se procesaron como urgencia — porque nadie planea qué materiales se necesitan ni cuándo</li>
-            <li>Cuando sí se comparan precios, el ahorro es hasta 64% (caso luminarias) — pero nadie lo exige como regla</li>
-            <li>13 proveedores concentran el 80% del gasto ($124M) y ninguno tiene contrato firmado — cada compra se negocia individualmente perdiendo poder de volumen</li>
-            <li>Atiye tiene el 100% del acero (24% del gasto total) — ya falló una vez y tuvieron que diversificar de emergencia. No hay plan B</li>
-            <li>No existe una plantilla de evaluación de proveedores — no hay registro de cómo han cumplido en tiempo, calidad ni precio. Un proveedor que falla repetidamente sigue recibiendo órdenes</li>
-            <li>El equipo de obra habla directo con proveedores, cierra el trato, y luego le pide a Compras que procese el pago — Compras solo da trámite</li>
-            <li>Requisiciones sin especificaciones técnicas suficientes generan errores y sobrecostos evitables</li>
-            <li>Cuando la urgencia obliga a instalar material con un tercero en vez del proveedor original, se pierde la garantía — y nadie mide el costo de eso</li>
-          </ul>
-        </div>
-        <div>
-          <div class="col-label green">✓ Cómo se arregla</div>
-          <div class="sol-box">
-            <strong>Planear antes de comprar + plantilla de evaluación de proveedores</strong>
-            <p>Lista de materiales ligada al calendario de obra para anticipar compras, mínimo 3 cotizaciones obligatorias por monto, contratos anuales con los 15 proveedores principales, y una plantilla de evaluación post-proyecto que registre cumplimiento en tiempo, calidad y precio — para que haya memoria institucional de con quién funciona y con quién no. Ahorro estimado: <strong style="color:#2d8c4e">$10–18M</strong> (8–15% del gasto total).</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- EJECUCION -->
-    <div class="card">
-      <div class="card-head">
-        <div class="card-head-left"><span class="sec-num">09</span><span class="card-title">Ejecución y Control de Obra</span></div>
-        <span class="badge red-b">CMM 1.1 — Crítico</span>
-      </div>
-      <div class="card-body">
-        <div>
-          <div class="col-label red">× Lo que está mal</div>
-          <ul class="prob-list">
-            <li>Sin programa maestro de obra — no hay secuencia constructiva formal, las actividades se ejecutan según disponibilidad de materiales y contratistas, no por lógica de ruta crítica</li>
-            <li>Sin comparación avance vs programa — no existe curva S ni forma de saber si la obra va adelantada o atrasada</li>
-            <li>4 flujos de reporte paralelos que no se integran — Jefe de Obra, contratista, Control de Obra y Finanzas manejan información diferente; Finanzas recibe avance con 15 días de retraso</li>
-            <li>El reporte al banco se infla — no hay una sola versión de la verdad</li>
-            <li>Supervisores sin rol definido — hacen supervisión, logística, coordinación de contratistas y reporte al mismo tiempo; los defectos se detectan en recorrido, no por proceso</li>
-            <li>Sin bitácora formal de obra — el registro se lleva por WhatsApp; no hay historial de decisiones, cambios de alcance ni incidentes en campo</li>
-            <li>Aprendizajes de proyectos anteriores no se documentan — cada obra repite los mismos errores</li>
-          </ul>
-
-          <!-- PORTAFOLIO ACTUAL -->
-          <div style="margin-top:16px;background:#fff5f5;border:1px solid #fed7d7;border-radius:8px;padding:14px 16px;">
-            <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#c53030;margin-bottom:10px;">Estado actual del portafolio — consecuencias reales</div>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;">
-              <div style="text-align:center;background:#fff;border:1px solid #fed7d7;border-radius:8px;padding:10px;">
-                <div style="font-size:1.4rem;font-weight:700;color:#c53030;">$22.2M</div>
-                <div style="font-size:0.72rem;color:#718096;margin-top:2px;">En sobrecostos en proyectos aún no terminados</div>
-              </div>
-              <div style="text-align:center;background:#fff;border:1px solid #fed7d7;border-radius:8px;padding:10px;">
-                <div style="font-size:1.4rem;font-weight:700;color:#c53030;">8 de 13</div>
-                <div style="font-size:0.72rem;color:#718096;margin-top:2px;">Proyectos con retraso — desde semanas hasta 1 año</div>
-              </div>
-              <div style="text-align:center;background:#fff;border:1px solid #fed7d7;border-radius:8px;padding:10px;">
-                <div style="font-size:1.4rem;font-weight:700;color:#c53030;">12 de 13</div>
-                <div style="font-size:0.72rem;color:#718096;margin-top:2px;">Obras cargadas al mismo equipo interno — saturación documentada</div>
-              </div>
-              <div style="text-align:center;background:#fff;border:1px solid #fed7d7;border-radius:8px;padding:10px;">
-                <div style="font-size:1.4rem;font-weight:700;color:#c53030;">5</div>
-                <div style="font-size:0.72rem;color:#718096;margin-top:2px;">Contratistas críticos en múltiples obras — si uno falla, caen varias</div>
-              </div>
-            </div>
-            <div style="font-size:0.75rem;color:#c53030;margin-top:10px;font-style:italic;">Esta tabla tuvo que armarse manualmente — no existe ninguna herramienta que muestre el estado del portafolio en tiempo real.</div>
-          </div>
-        </div>
-        <div>
-          <div class="col-label green">✓ Cómo se arregla</div>
-          <div class="sol-box">
-            <strong>Last Planner System + EVM semanal + cierre con lecciones aprendidas</strong>
-            <p>PPC semanal, lookahead a 4 semanas con compromisos, curva S financiero-físico, CPI/SPI con alerta temprana, y acta de cierre obligatoria que alimenta el catálogo de costos y registro de riesgos para proyectos futuros.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- CURVA S VISUAL -->
-      <div style="padding:0 20px 20px;">
-        <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:20px;">
-          <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#2d8c4e;margin-bottom:4px;">Herramienta de control</div>
-          <div style="font-size:0.9rem;font-weight:600;color:#1a202c;margin-bottom:4px;">Curva S + Semáforos — así debería verse cada proyecto</div>
-          <div style="font-size:0.78rem;color:#718096;margin-bottom:16px;">Compara el avance planeado vs el avance real. La distancia entre ambas líneas indica si el proyecto está en riesgo.</div>
-
-          <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start;">
-
-            <!-- CHART -->
-            <svg viewBox="0 0 540 260" style="flex:1;min-width:280px;max-width:480px;" xmlns="http://www.w3.org/2000/svg">
-              <!-- Grid lines -->
-              <line x1="55" y1="20"  x2="525" y2="20"  stroke="#e2e8f0" stroke-width="1"/>
-              <line x1="55" y1="77"  x2="525" y2="77"  stroke="#e2e8f0" stroke-width="1"/>
-              <line x1="55" y1="135" x2="525" y2="135" stroke="#e2e8f0" stroke-width="1"/>
-              <line x1="55" y1="192" x2="525" y2="192" stroke="#e2e8f0" stroke-width="1"/>
-              <line x1="55" y1="250" x2="525" y2="250" stroke="#e2e8f0" stroke-width="1"/>
-
-              <!-- Y axis labels -->
-              <text x="48" y="24"  text-anchor="end" font-size="10" fill="#a0aec0">100%</text>
-              <text x="48" y="81"  text-anchor="end" font-size="10" fill="#a0aec0">75%</text>
-              <text x="48" y="139" text-anchor="end" font-size="10" fill="#a0aec0">50%</text>
-              <text x="48" y="196" text-anchor="end" font-size="10" fill="#a0aec0">25%</text>
-              <text x="48" y="254" text-anchor="end" font-size="10" fill="#a0aec0">0%</text>
-
-              <!-- X axis labels -->
-              <text x="94"  y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M1</text>
-              <text x="133" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M2</text>
-              <text x="172" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M3</text>
-              <text x="211" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M4</text>
-              <text x="250" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M5</text>
-              <text x="289" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M6</text>
-              <text x="328" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M7</text>
-              <text x="367" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M8</text>
-              <text x="406" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M9</text>
-              <text x="445" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M10</text>
-              <text x="484" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M11</text>
-              <text x="523" y="268" text-anchor="middle" font-size="9" fill="#a0aec0">M12</text>
-
-              <!-- Shaded gap area -->
-              <polygon points="55,250 94,247 133,242 172,228 211,204 250,173 289,142 328,107 367,250 328,250 289,250 250,250 211,250 172,250 133,250 94,250" fill="rgba(197,48,48,0.06)"/>
-
-              <!-- Planned S-curve (teal) -->
-              <polyline
-                points="55,250 94,247 133,242 172,228 211,204 250,173 289,142 328,107 367,77 406,52 445,35 484,25 523,20"
-                fill="none" stroke="#2d8c4e" stroke-width="2.5" stroke-linejoin="round"/>
-
-              <!-- Actual line (red, only to M8) -->
-              <polyline
-                points="55,250 94,248 133,245 172,235 211,217 250,192 289,165 328,138 367,113"
-                fill="none" stroke="#c53030" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="6,3"/>
-
-              <!-- Current point marker -->
-              <circle cx="367" cy="113" r="5" fill="#c53030"/>
-              <line x1="367" y1="20" x2="367" y2="250" stroke="#c53030" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
-
-              <!-- Gap label -->
-              <text x="380" y="93"  font-size="9" fill="#c53030" font-weight="600">Real: 62%</text>
-              <text x="380" y="105" font-size="9" fill="#c53030">Planeado: 83%</text>
-              <text x="380" y="117" font-size="9" fill="#c53030">Gap: −21%</text>
-
-              <!-- Legend -->
-              <line x1="58" y1="14" x2="80" y2="14" stroke="#2d8c4e" stroke-width="2.5"/>
-              <text x="84" y="18" font-size="9" fill="#4a5568">Planeado</text>
-              <line x1="130" y1="14" x2="152" y2="14" stroke="#c53030" stroke-width="2.5" stroke-dasharray="4,2"/>
-              <text x="156" y="18" font-size="9" fill="#4a5568">Real</text>
-            </svg>
-
-            <!-- SEMAFOROS -->
-            <div style="display:flex;flex-direction:column;gap:10px;min-width:160px;">
-              <div style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#718096;margin-bottom:2px;">Semáforos del proyecto</div>
-
-              <div style="background:#fff;border:1px solid #fed7d7;border-radius:8px;padding:10px 14px;display:flex;align-items:center;gap:10px;">
-                <div style="width:12px;height:12px;border-radius:50%;background:#c53030;flex-shrink:0;box-shadow:0 0 6px rgba(197,48,48,0.5);"></div>
-                <div>
-                  <div style="font-size:0.78rem;font-weight:600;color:#1a202c;">Avance físico</div>
-                  <div style="font-size:0.72rem;color:#718096;">21% por debajo del plan</div>
-                </div>
-              </div>
-
-              <div style="background:#fff;border:1px solid #fed7d7;border-radius:8px;padding:10px 14px;display:flex;align-items:center;gap:10px;">
-                <div style="width:12px;height:12px;border-radius:50%;background:#c53030;flex-shrink:0;box-shadow:0 0 6px rgba(197,48,48,0.5);"></div>
-                <div>
-                  <div style="font-size:0.78rem;font-weight:600;color:#1a202c;">Costo vs presupuesto</div>
-                  <div style="font-size:0.72rem;color:#718096;">Desviación no medida</div>
-                </div>
-              </div>
-
-              <div style="background:#fff;border:1px solid #fbd38d;border-radius:8px;padding:10px 14px;display:flex;align-items:center;gap:10px;">
-                <div style="width:12px;height:12px;border-radius:50%;background:#d69e2e;flex-shrink:0;box-shadow:0 0 6px rgba(214,158,46,0.5);"></div>
-                <div>
-                  <div style="font-size:0.78rem;font-weight:600;color:#1a202c;">Plazo de entrega</div>
-                  <div style="font-size:0.72rem;color:#718096;">En riesgo de retraso</div>
-                </div>
-              </div>
-
-              <div style="background:#fff;border:1px solid #9ae6b4;border-radius:8px;padding:10px 14px;display:flex;align-items:center;gap:10px;">
-                <div style="width:12px;height:12px;border-radius:50%;background:#2d8c4e;flex-shrink:0;box-shadow:0 0 6px rgba(45,140,78,0.4);"></div>
-                <div>
-                  <div style="font-size:0.78rem;font-weight:600;color:#1a202c;">Calidad</div>
-                  <div style="font-size:0.72rem;color:#718096;">Sin incidentes reportados</div>
-                </div>
-              </div>
-
-              <div style="font-size:0.72rem;color:#a0aec0;margin-top:4px;line-height:1.5;">Con esta herramienta el Director General ve el estado de todos los proyectos en 30 segundos.</div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ESTRUCTURA -->
-    <div class="card">
-      <div class="card-head">
-        <div class="card-head-left"><span class="sec-num">04</span><span class="card-title">Estructura, PMO y Gobierno</span></div>
-        <span class="badge red-b">CMM 1.0 — Crítico</span>
-      </div>
-      <div class="card-body">
-        <div>
-          <div class="col-label red">× Lo que está mal</div>
-          <ul class="prob-list">
-            <li>DG saturado en decisiones tácticas — sin delegación ni capa integradora</li>
-            <li>Sin PMO: la organización no puede escalar de 2 a 6 proyectos simultáneos</li>
-            <li>Decisiones ad-hoc según quién esté disponible — sin comité ni protocolo de escalamiento</li>
-            <li>Contraloría sin visibilidad de costos por proyecto</li>
-            <li>Lecciones de proyectos anteriores no se documentan ni se consultan al iniciar uno nuevo</li>
-            <li>Esquemas de compensación informales sin política institucional</li>
-          </ul>
-        </div>
-        <div>
-          <div class="col-label green">✓ Cómo se arregla</div>
-          <div class="sol-box">
-            <strong>PMO + Controlling + RACI por nivel de decisión</strong>
-            <p>PMO como gobierno de portafolio, rol de controlling financiero como business partner de operaciones, dashboard mensual de KPIs, protocolo de escalamiento y base de conocimiento de proyectos cerrados para consulta en proyectos similares futuros.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- INGENIERIA -->
-    <div class="card">
-      <div class="card-head">
-        <div class="card-head-left"><span class="sec-num">07</span><span class="card-title">Ingeniería y Diseño</span></div>
-        <span class="badge yellow-b">CMM 2.5 — Emergente</span>
-      </div>
-      <div class="card-body">
-        <div>
-          <div class="col-label red">× Lo que está mal</div>
-          <ul class="prob-list">
-            <li>$40M en ahorros de ingeniería de valor generados ad-hoc por una sola persona — el talento existe, el proceso no</li>
-            <li>36 ítems críticos en Pantaleón (incendio, 440V, ventilación) en "Stand By" — fuera de presupuesto por no anticiparse en diseño</li>
-            <li>Obra arranca sin ingeniería completa — especificaciones se definen sobre la marcha, 3+ iteraciones por proyecto</li>
-            <li>Planos gestionados por WhatsApp y email sin control de versiones — riesgo real de construir con planos obsoletos</li>
-            <li>Disciplinas en silos: arquitectura, estructura, eléctrico e hidráulico sin punto de coordinación</li>
-            <li>Sin MS Project ni programa maestro — seguimiento de obra por WhatsApp</li>
-          </ul>
-        </div>
-        <div>
-          <div class="col-label green">✓ Cómo se arregla</div>
-          <div class="sol-box">
-            <strong>Gate "For Construction" + DCM semanal + institucionalizar los $40M</strong>
-            <p>Junta de coordinación entre disciplinas antes y durante la obra, checklist obligatorio antes de arrancar construcción, control de versiones centralizado, proceso formal de Change Order, y sistematizar la ingeniería de valor para que los ahorros no dependan de que una persona específica participe en la revisión.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- COMERCIAL -->
-    <div class="card">
-      <div class="card-head">
-        <div class="card-head-left"><span class="sec-num">05</span><span class="card-title">Comercial y Desarrollo de Negocios</span></div>
-        <span class="badge green-b">CMM 3.0 — Fortaleza con brechas</span>
-      </div>
-      <div class="card-body">
-        <div>
-          <div class="col-label red">× Brechas a cerrar</div>
-          <ul class="prob-list">
-            <li>Sin CRM — pipeline gestionado en Excel; forecast 2026 vacío</li>
-            <li>Tasa de conversión del 13% (258K m² cerrados de 1.99M en pipeline)</li>
-            <li>Handoff a operaciones informal — sin kickoff ni brief documentado al equipo de obra</li>
-            <li>Sin análisis de win/loss — los deals perdidos no se estudian</li>
-            <li>Sin NPS ni medición de satisfacción post-entrega</li>
-          </ul>
-        </div>
-        <div>
-          <div class="col-label green">✓ Cómo se arregla</div>
-          <div class="sol-box">
-            <strong>CRM con pipeline probabilístico + kickoff formal de proyectos</strong>
-            <p>Kickoff obligatorio con checklist documentado al pasar proyecto a operaciones, post-mortem de deals perdidos, y NPS trimestral para institucionalizar el rigor comercial a escala y mejorar la tasa de conversión.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ENTREGA -->
-    <div class="card">
-      <div class="card-head">
-        <div class="card-head-left"><span class="sec-num">10</span><span class="card-title">Entrega y Calidad</span></div>
-        <span class="badge red-b">CMM 1.0 — Crítico</span>
-      </div>
-      <div class="card-body">
-        <div>
-          <div class="col-label red">× Lo que está mal</div>
-          <ul class="prob-list">
-            <li>Sin proceso formal de entrega — el traspaso de obra a cliente no está estandarizado</li>
-            <li>Sin gestión de punch list — pendientes de obra no se rastrean sistemáticamente</li>
-            <li>Sin protocolo de inspección final ni firma de conformidad del cliente</li>
-            <li>Sin As-Built — no se actualizan los planos con lo que quedó realmente construido</li>
-            <li>Sin estructura de garantía post-entrega documentada</li>
-          </ul>
-        </div>
-        <div>
-          <div class="col-label green">✓ Cómo se arregla</div>
-          <div class="sol-box">
-            <strong>Protocolo de entrega formal con As-Built y garantía</strong>
-            <p>Checklist de inspección final, gestión de punch list en sistema, entrega formal al cliente con planos As-Built, seguimiento de garantía a 12 meses y captura de lecciones aprendidas para mejorar futuros proyectos.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SOPORTE -->
-    <div class="card">
-      <div class="card-head">
-        <div class="card-head-left"><span class="sec-num">12</span><span class="card-title">Soporte: Finanzas, Capital Humano y TI</span></div>
-        <span class="badge red-b">CMM 1.0–1.5 — Crítico</span>
-      </div>
-      <div class="card-body">
-        <div>
-          <div class="col-label red">× Lo que está mal</div>
-          <ul class="prob-list">
-            <li><strong style="color:#adbac7">Finanzas:</strong> pre-presupuesto sobreestimado 3-4x; pagos sin control cruzado contra contrato</li>
-            <li><strong style="color:#adbac7">Capital Humano:</strong> contratos "asimilado a salario" generalizados; 50% de rotación en nuevas contrataciones en 5 meses; RH sin participación en contrataciones de Aura</li>
-            <li><strong style="color:#adbac7">TI:</strong> 32,000+ registros en sistema sin convertir en indicadores; solo 1 persona de TI dedica 15% de su tiempo a Aura; sistemas fragmentados sin plan de integración</li>
-            <li><strong style="color:#adbac7">Gobernanza:</strong> roles superpuestos; DG en decisiones tácticas; sin mecanismo de gobierno formal</li>
-          </ul>
-        </div>
-        <div>
-          <div class="col-label green">✓ Cómo se arregla</div>
-          <div class="sol-box">
-            <strong>Formalizar las áreas de soporte como habilitadores del negocio</strong>
-            <p>Política de compensación con tabulador formal, RH activo en selección y retención, roadmap de integración tecnológica (Odoo como sistema único), RACI de gobierno con autoridades de decisión por nivel y comité mensual de revisión con KPIs estandarizados.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- SOLUCIÓN PROPUESTA -->
-  <div style="max-width:1060px;margin:0 auto;padding:0 40px 48px;">
-    <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#2d8c4e;margin-bottom:10px;">Plan de Transformación</div>
-    <h2 style="font-size:1.3rem;font-weight:700;color:#1a202c;margin-bottom:6px;">Modelo de Gestión Operativa 360°</h2>
-    <p style="font-size:0.85rem;color:#4a5568;margin-bottom:24px;max-width:680px;line-height:1.65;">Los problemas identificados tienen solución. El plan se estructura en 6 pilares que van desde redefinir cómo trabaja cada persona hasta conectar todas las herramientas en un solo flujo digital.</p>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px;margin-bottom:24px;">
-
-      <div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:18px;border-top:3px solid #1a2332;">
-        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#a0aec0;margin-bottom:6px;">Pilar 01</div>
-        <div style="font-size:0.88rem;font-weight:600;color:#1a202c;margin-bottom:6px;">Modelo Operativo Integral</div>
-        <div style="font-size:0.79rem;color:#4a5568;line-height:1.55;">Redefinir procesos clave de planeación, programación y control. Roles claros por frente, especialidad y tipo de proyecto. Estándares diferenciados para obras industriales y de vivienda.</div>
-      </div>
-
-      <div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:18px;border-top:3px solid #1a2332;">
-        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#a0aec0;margin-bottom:6px;">Pilar 02</div>
-        <div style="font-size:0.88rem;font-weight:600;color:#1a202c;margin-bottom:6px;">Rutinas de Gestión y Supervisión</div>
-        <div style="font-size:0.79rem;color:#4a5568;line-height:1.55;">Una "semana típica" definida para cada nivel — residente, supervisor y dirección de obra. Cultura de disciplina operativa y toma de decisiones basada en datos, no en intuición.</div>
-      </div>
-
-      <div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:18px;border-top:3px solid #1a2332;">
-        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#a0aec0;margin-bottom:6px;">Pilar 03</div>
-        <div style="font-size:0.88rem;font-weight:600;color:#1a202c;margin-bottom:6px;">Seguimiento Visual y Trazabilidad</div>
-        <div style="font-size:0.79rem;color:#4a5568;line-height:1.55;">Power BI con dashboards de avance por etapa, contratista y especialidad. Alertas automáticas por desviación. Frecuencias adaptadas: diario, semanal, mensual — en lugar de reportes manuales por WhatsApp.</div>
-      </div>
-
-      <div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:18px;border-top:3px solid #1a2332;">
-        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#a0aec0;margin-bottom:6px;">Pilar 04</div>
-        <div style="font-size:0.88rem;font-weight:600;color:#1a202c;margin-bottom:6px;">Integración Físico-Económica</div>
-        <div style="font-size:0.79rem;color:#4a5568;line-height:1.55;">Lo que se construye en campo se cruza automáticamente con lo que se paga. Visibilidad por obra, frente y proveedor. Elimina la gestión empírica y los 4 flujos de reporte desconectados.</div>
-      </div>
-
-      <div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:18px;border-top:3px solid #1a2332;">
-        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#a0aec0;margin-bottom:6px;">Pilar 05</div>
-        <div style="font-size:0.88rem;font-weight:600;color:#1a202c;margin-bottom:6px;">Estimaciones y Pagos Digitalizados</div>
-        <div style="font-size:0.79rem;color:#4a5568;line-height:1.55;">Formularios estandarizados para reporte de avance de contratistas. Validación automática contra presupuesto y contrato antes de aprobar cualquier pago. Flujos de autorización con trazabilidad completa.</div>
-      </div>
-
-      <div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:18px;border-top:3px solid #1a2332;">
-        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#a0aec0;margin-bottom:6px;">Pilar 06</div>
-        <div style="font-size:0.88rem;font-weight:600;color:#1a202c;margin-bottom:6px;">Integración de Plataformas</div>
-        <div style="font-size:0.79rem;color:#4a5568;line-height:1.55;">Power BI + Power Apps (checklists desde celular en obra con foto georreferenciada) + Power Automate (aprobaciones automáticas) + SketchUp/BIM. Todas las herramientas conectadas en un solo flujo.</div>
-      </div>
-
-    </div>
-
-    <!-- SALA DE CONTROL -->
-    <div style="background:#1a2332;border-radius:12px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;">
       <div>
-        <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#4a6080;margin-bottom:8px;">Resultado Final</div>
-        <div style="font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:8px;">Sala de Control Digital</div>
-        <div style="font-size:0.82rem;color:#8b9ab0;max-width:520px;line-height:1.6;">Un dashboard por obra y por unidad de negocio. El Director General ve el estado real de todos los proyectos — avance físico, costo vs presupuesto, semáforos de riesgo — en 30 segundos, sin depender de que alguien le mande un reporte.</div>
-      </div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;">
-        <div style="text-align:center;background:rgba(255,255,255,0.07);border-radius:8px;padding:14px 18px;">
-          <div style="font-size:1.3rem;font-weight:700;color:#3fb950;">Tiempo</div>
-          <div style="font-size:0.7rem;color:#4a6080;text-transform:uppercase;letter-spacing:1px;margin-top:2px;">real</div>
-        </div>
-        <div style="text-align:center;background:rgba(255,255,255,0.07);border-radius:8px;padding:14px 18px;">
-          <div style="font-size:1.3rem;font-weight:700;color:#3fb950;">Costo</div>
-          <div style="font-size:0.7rem;color:#4a6080;text-transform:uppercase;letter-spacing:1px;margin-top:2px;">vs plan</div>
-        </div>
-        <div style="text-align:center;background:rgba(255,255,255,0.07);border-radius:8px;padding:14px 18px;">
-          <div style="font-size:1.3rem;font-weight:700;color:#3fb950;">Calidad</div>
-          <div style="font-size:0.7rem;color:#4a6080;text-transform:uppercase;letter-spacing:1px;margin-top:2px;">por obra</div>
+        <div class="col-label green">✓ Cómo se arregla</div>
+        <div class="sol-box">
+          <strong>PMO + Controlling + RACI por nivel de decisión</strong>
+          <p>PMO como gobierno de portafolio, rol de controlling financiero como business partner de operaciones, dashboard mensual de KPIs, protocolo de escalamiento y base de conocimiento de proyectos cerrados para consulta en proyectos futuros.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="impact">
-    <h2>Inversión y Retorno — Propuesta London Consulting</h2>
-    <div class="impact-grid">
-      <div class="impact-card" style="border-top:3px solid #1a2332;">
-        <div class="sce">Inversión total consultoría</div>
-        <div class="amt" style="color:#1a2332;">$684K USD</div>
-        <div class="roi">114 semanas · equipo dedicado en sitio</div>
-      </div>
-      <div class="impact-card c2">
-        <div class="sce">Ahorro esperado (5% conservador)</div>
-        <div class="amt">$36.8M MXN</div>
-        <div class="roi">Sobre 100,000 m² de construcción proyectada</div>
-      </div>
-      <div class="impact-card c3">
-        <div class="sce">Retorno sobre la inversión</div>
-        <div class="amt">3.0x</div>
-        <div class="roi">Retorno neto: $1.36M USD</div>
-      </div>
+  <!-- COMERCIAL -->
+  <div class="card">
+    <div class="card-head">
+      <div class="card-head-left"><span class="sec-num">05</span><span class="card-title">Comercial y Desarrollo de Negocios</span></div>
+      <span class="badge green-b">CMM 3.0 — Fortaleza con brechas</span>
     </div>
-    <div style="margin-top:14px;font-size:0.75rem;color:#a0aec0;line-height:1.6;">
-      * Inversión no incluye IVA ni software requerido. Los ahorros se calculan sobre el costo de construcción proyectado a tipo de cambio $18 USD/MXN. El método de evaluación financiera se define al cierre de la etapa de análisis.
+    <div class="card-body">
+      <div>
+        <div class="col-label red">× Brechas a cerrar</div>
+        <ul class="prob-list">
+          <li>Sin CRM — pipeline de 1.99M m² gestionado en Excel con forecast 2026 vacío</li>
+          <li>Tasa de conversión del 13% — 258K m² cerrados de 1.99M en pipeline</li>
+          <li>Handoff a operaciones informal — sin kickoff ni brief documentado al equipo de obra</li>
+          <li>Sin análisis de win/loss — los deals perdidos no se estudian</li>
+          <li>Sin NPS ni medición de satisfacción post-entrega</li>
+        </ul>
+      </div>
+      <div>
+        <div class="col-label green">✓ Cómo se arregla</div>
+        <div class="sol-box">
+          <strong>CRM con pipeline probabilístico + kickoff formal</strong>
+          <p>Kickoff obligatorio con checklist documentado al pasar proyecto a operaciones, post-mortem de deals perdidos y NPS trimestral para institucionalizar el rigor comercial a escala.</p>
+        </div>
+      </div>
     </div>
   </div>
 
-  <footer>London Consulting Group × Aura Desarrollos · Prediagnóstico Operativo ABR 2026 · Confidencial</footer>
+  <!-- ENTREGA -->
+  <div class="card">
+    <div class="card-head">
+      <div class="card-head-left"><span class="sec-num">10</span><span class="card-title">Entrega y Calidad</span></div>
+      <span class="badge red-b">CMM 1.0 — Crítico</span>
+    </div>
+    <div class="card-body">
+      <div>
+        <div class="col-label red">× Lo que está mal</div>
+        <ul class="prob-list">
+          <li>Sin proceso formal de entrega — el traspaso de obra a cliente no está estandarizado</li>
+          <li>Sin gestión de punch list — pendientes de obra no se rastrean sistemáticamente</li>
+          <li>Sin protocolo de inspección final ni firma de conformidad del cliente</li>
+          <li>Sin As-Built — planos no actualizados con lo que quedó realmente construido</li>
+        </ul>
+      </div>
+      <div>
+        <div class="col-label green">✓ Cómo se arregla</div>
+        <div class="sol-box">
+          <strong>Protocolo de entrega formal con As-Built y garantía</strong>
+          <p>Checklist de inspección final, punch list en sistema, entrega formal con planos As-Built, seguimiento de garantía a 12 meses y captura de lecciones aprendidas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOPORTE -->
+  <div class="card">
+    <div class="card-head">
+      <div class="card-head-left"><span class="sec-num">12</span><span class="card-title">Soporte: Finanzas, Capital Humano y TI</span></div>
+      <span class="badge red-b">CMM 1.0–1.5 — Crítico</span>
+    </div>
+    <div class="card-body">
+      <div>
+        <div class="col-label red">× Lo que está mal</div>
+        <ul class="prob-list">
+          <li><strong style="color:#2d3748">Finanzas:</strong> pre-presupuesto sobreestimado 3-4x; pagos sin control cruzado contra contrato</li>
+          <li><strong style="color:#2d3748">Capital Humano:</strong> 50% de rotación en nuevas contrataciones en 5 meses; RH sin participación en contrataciones de Aura</li>
+          <li><strong style="color:#2d3748">TI:</strong> 32,000+ registros sin convertir en indicadores; solo 1 persona dedica 15% de su tiempo a Aura; sistemas fragmentados sin plan de integración</li>
+        </ul>
+      </div>
+      <div>
+        <div class="col-label green">✓ Cómo se arregla</div>
+        <div class="sol-box">
+          <strong>Formalizar áreas de soporte como habilitadores del negocio</strong>
+          <p>Política de compensación con tabulador formal, RH activo en selección y retención, roadmap de integración tecnológica con Odoo como sistema único y RACI de gobierno con autoridades de decisión por nivel.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- LO QUE HAY QUE HACER -->
+<div class="section-wrap" style="padding-bottom:16px;">
+  <div class="section-tag">Propuesta de Intervención</div>
+  <div class="section-title">Lo Que Hay Que Hacer</div>
+  <div class="section-sub">4 ejes de transformación derivados del prediagnóstico, alineados a las expectativas E1–E5.</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(440px,1fr));gap:14px;">
+
+    <div style="background:#fff;border:1px solid #9ae6b4;border-radius:10px;padding:20px;box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+        <div style="background:#2d8c4e;color:#fff;font-size:0.85rem;font-weight:700;width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;">1</div>
+        <div><div style="font-size:0.88rem;font-weight:600;color:#2d8c4e;">Presupuestación Integrada</div><div style="font-size:9px;color:#a0aec0;letter-spacing:1px;text-transform:uppercase;">E2 · E3</div></div>
+      </div>
+      <div style="font-size:0.79rem;color:#4a5568;line-height:1.6;margin-bottom:10px;">Target Value Delivery → CBS estándar con catálogo base → SOW por disciplina → validación cruzada con Compras → <strong>PIC como línea base aprobada</strong> → EVM con corte semanal → cierre financiero con lecciones aprendidas.</div>
+      <div style="font-size:0.79rem;font-weight:600;color:#2d8c4e;">Un solo sistema, un solo flujo, una sola verdad.</div>
+    </div>
+
+    <div style="background:#fff;border:1px solid #9ae6b4;border-radius:10px;padding:20px;box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+        <div style="background:#2d8c4e;color:#fff;font-size:0.85rem;font-weight:700;width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;">2</div>
+        <div><div style="font-size:0.88rem;font-weight:600;color:#2d8c4e;">Coordinación de Disciplinas</div><div style="font-size:9px;color:#a0aec0;letter-spacing:1px;text-transform:uppercase;">E3 · E5</div></div>
+      </div>
+      <div style="font-size:0.79rem;color:#4a5568;line-height:1.6;margin-bottom:10px;">Sesión DCM pre-obra obligatoria → bases de diseño documentadas → checklist de entregables <strong>"For Construction"</strong> por disciplina → control de versiones centralizado → proceso de Change Order formal.</div>
+      <div style="font-size:0.79rem;font-weight:600;color:#2d8c4e;">A futuro: BIM para clash detection y modelo integrado.</div>
+    </div>
+
+    <div style="background:#fff;border:1px solid #9ae6b4;border-radius:10px;padding:20px;box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+        <div style="background:#2d8c4e;color:#fff;font-size:0.85rem;font-weight:700;width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;">3</div>
+        <div><div style="font-size:0.88rem;font-weight:600;color:#2d8c4e;">Strategic Sourcing</div><div style="font-size:9px;color:#a0aec0;letter-spacing:1px;text-transform:uppercase;">E3</div></div>
+      </div>
+      <div style="font-size:0.79rem;color:#4a5568;line-height:1.6;margin-bottom:10px;">Plan de materiales vinculado al cronograma → <strong>Matriz Kraljic</strong> para categorización → cuadro comparativo obligatorio → contratos marco con top 15 proveedores → evaluación post-proyecto con KPIs.</div>
+      <div style="font-size:0.79rem;font-weight:600;color:#2d8c4e;">Ahorro estimado: 8–15% sobre gasto Pareto ($10–18M).</div>
+    </div>
+
+    <div style="background:#fff;border:1px solid #9ae6b4;border-radius:10px;padding:20px;box-shadow:0 1px 4px rgba(0,0,0,0.05);">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+        <div style="background:#2d8c4e;color:#fff;font-size:0.85rem;font-weight:700;width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;">4</div>
+        <div><div style="font-size:0.88rem;font-weight:600;color:#2d8c4e;">Control de Obra Integrado</div><div style="font-size:9px;color:#a0aec0;letter-spacing:1px;text-transform:uppercase;">E4</div></div>
+      </div>
+      <div style="font-size:0.79rem;color:#4a5568;line-height:1.6;margin-bottom:10px;">Dashboard integrado con avance físico vs programa → costo real vs presupuesto (<strong>EVM: SPI + CPI</strong>) → alertas automáticas de desviación → un solo flujo de reporte con corte semanal estandarizado.</div>
+      <div style="font-size:0.79rem;font-weight:600;color:#2d8c4e;">Bright spot: Mitzy (estimaciones) como base para el modelo integrado.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- PLAYBOOK -->
+<div class="section-wrap">
+  <div style="background:#1a2332;border-radius:14px;padding:32px;color:#fff;">
+    <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#4a6080;margin-bottom:8px;">Plan de Implementación</div>
+    <div style="font-size:1.2rem;font-weight:700;margin-bottom:6px;">40 Semanas de Transformación</div>
+    <div style="font-size:0.82rem;color:#8b9ab0;margin-bottom:28px;">Inicio: Mayo 2026 · Equipo London en sitio · 3 auditorías de sostenibilidad post-proyecto</div>
+
+    <!-- 3 URGENCIAS -->
+    <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#4a6080;margin-bottom:10px;">Por qué arrancar ahora</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin-bottom:28px;">
+      <div style="background:rgba(197,48,48,0.15);border:1px solid rgba(197,48,48,0.3);border-radius:8px;padding:14px;">
+        <div style="font-size:0.8rem;font-weight:600;color:#fc8181;margin-bottom:4px;">Entrega Pantaleón</div>
+        <div style="font-size:0.76rem;color:#8b9ab0;line-height:1.5;">Primera entrega real BTS sin procesos documentados — riesgo reputacional directo con el cliente</div>
+      </div>
+      <div style="background:rgba(197,48,48,0.15);border:1px solid rgba(197,48,48,0.3);border-radius:8px;padding:14px;">
+        <div style="font-size:0.8rem;font-weight:600;color:#fc8181;margin-bottom:4px;">3B Xalapa por arrancar</div>
+        <div style="font-size:0.76rem;color:#8b9ab0;line-height:1.5;">Proyecto de $150M MXN listo para iniciar sin procesos instalados — mismos errores, mayor escala</div>
+      </div>
+      <div style="background:rgba(197,48,48,0.15);border:1px solid rgba(197,48,48,0.3);border-radius:8px;padding:14px;">
+        <div style="font-size:0.8rem;font-weight:600;color:#fc8181;margin-bottom:4px;">Pipeline supera capacidad</div>
+        <div style="font-size:0.76rem;color:#8b9ab0;line-height:1.5;">350,000+ m² en pipeline activo sin infraestructura de gestión para soportar ese volumen</div>
+      </div>
+    </div>
+
+    <!-- 5 FASES -->
+    <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#4a6080;margin-bottom:10px;">Fases de implementación</div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;">
+      <div style="background:rgba(255,255,255,0.07);border-radius:8px;padding:12px 16px;flex:1;min-width:140px;">
+        <div style="font-size:9px;color:#4a6080;margin-bottom:4px;">Semanas 1–4</div>
+        <div style="font-size:0.8rem;font-weight:600;color:#e2e8f0;">Análisis y Quick Wins</div>
+        <div style="font-size:0.72rem;color:#8b9ab0;margin-top:3px;">Gemba walks, VSM, oportunidades inmediatas</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.07);border-radius:8px;padding:12px 16px;flex:1;min-width:140px;">
+        <div style="font-size:9px;color:#4a6080;margin-bottom:4px;">Semanas 5–15</div>
+        <div style="font-size:0.8rem;font-weight:600;color:#e2e8f0;">Diseño</div>
+        <div style="font-size:0.72rem;color:#8b9ab0;margin-top:3px;">Procesos TO-BE, KPIs, modelo de gobierno</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.07);border-radius:8px;padding:12px 16px;flex:1;min-width:140px;">
+        <div style="font-size:9px;color:#4a6080;margin-bottom:4px;">Semanas 10–20</div>
+        <div style="font-size:0.8rem;font-weight:600;color:#e2e8f0;">Capacitación</div>
+        <div style="font-size:0.72rem;color:#8b9ab0;margin-top:3px;">Certificación por rol, coaching de líderes</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.07);border-radius:8px;padding:12px 16px;flex:1;min-width:140px;">
+        <div style="font-size:9px;color:#4a6080;margin-bottom:4px;">Semanas 15–40</div>
+        <div style="font-size:0.8rem;font-weight:600;color:#e2e8f0;">Implementación</div>
+        <div style="font-size:0.72rem;color:#8b9ab0;margin-top:3px;">Coaching lado a lado, dashboards en vivo</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.07);border-radius:8px;padding:12px 16px;flex:1;min-width:140px;">
+        <div style="font-size:9px;color:#4a6080;margin-bottom:4px;">Post-proyecto</div>
+        <div style="font-size:0.8rem;font-weight:600;color:#e2e8f0;">Auditorías</div>
+        <div style="font-size:0.72rem;color:#8b9ab0;margin-top:3px;">Revisiones a 3, 6 y 12 meses</div>
+      </div>
+    </div>
+
+    <!-- 10 ENTREGABLES -->
+    <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#4a6080;margin-bottom:10px;">10 entregables al finalizar las 40 semanas</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;">
+      <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:#3fb950;font-weight:700;font-size:0.8rem;flex-shrink:0;">01</span><span style="font-size:0.76rem;color:#8b9ab0;line-height:1.4;">Manuales de proceso para presupuesto, ingeniería, compras y ejecución</span></div>
+      <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:#3fb950;font-weight:700;font-size:0.8rem;flex-shrink:0;">02</span><span style="font-size:0.76rem;color:#8b9ab0;line-height:1.4;">KPIs definidos y dashboards configurados en Looker Studio / Power BI</span></div>
+      <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:#3fb950;font-weight:700;font-size:0.8rem;flex-shrink:0;">03</span><span style="font-size:0.76rem;color:#8b9ab0;line-height:1.4;">Integración Opus-Odoo eliminando doble captura</span></div>
+      <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:#3fb950;font-weight:700;font-size:0.8rem;flex-shrink:0;">04</span><span style="font-size:0.76rem;color:#8b9ab0;line-height:1.4;">Formato de reporte semanal estandarizado e institucionalizado</span></div>
+      <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:#3fb950;font-weight:700;font-size:0.8rem;flex-shrink:0;">05</span><span style="font-size:0.76rem;color:#8b9ab0;line-height:1.4;">Catálogo de proveedores calificados con contratos marco</span></div>
+      <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:#3fb950;font-weight:700;font-size:0.8rem;flex-shrink:0;">06</span><span style="font-size:0.76rem;color:#8b9ab0;line-height:1.4;">Curva S por proyecto: presupuesto vs real en tiempo real</span></div>
+      <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:#3fb950;font-weight:700;font-size:0.8rem;flex-shrink:0;">07</span><span style="font-size:0.76rem;color:#8b9ab0;line-height:1.4;">Bitácora digital de obra por proyecto</span></div>
+      <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:#3fb950;font-weight:700;font-size:0.8rem;flex-shrink:0;">08</span><span style="font-size:0.76rem;color:#8b9ab0;line-height:1.4;">Protocolo de entrega y calidad BTS instalado</span></div>
+      <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:#3fb950;font-weight:700;font-size:0.8rem;flex-shrink:0;">09</span><span style="font-size:0.76rem;color:#8b9ab0;line-height:1.4;">Rutinas de gestión instaladas: comité semanal y revisión quincenal</span></div>
+      <div style="display:flex;gap:8px;align-items:flex-start;"><span style="color:#3fb950;font-weight:700;font-size:0.8rem;flex-shrink:0;">10</span><span style="font-size:0.76rem;color:#8b9ab0;line-height:1.4;">Equipo operando de forma autónoma con los nuevos procesos</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- SALA DE CONTROL -->
+<div class="section-wrap" style="padding-bottom:16px;">
+  <div style="background:#1a2332;border-radius:12px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;">
+    <div>
+      <div style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#4a6080;margin-bottom:8px;">Resultado Final</div>
+      <div style="font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:8px;">Sala de Control Digital</div>
+      <div style="font-size:0.82rem;color:#8b9ab0;max-width:520px;line-height:1.6;">Un dashboard por obra y por unidad de negocio. El Director General ve el estado real de todos los proyectos — avance físico, costo vs presupuesto, semáforos de riesgo — en 30 segundos, sin depender de que alguien le mande un reporte.</div>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <div style="text-align:center;background:rgba(255,255,255,0.07);border-radius:8px;padding:14px 18px;"><div style="font-size:1.2rem;font-weight:700;color:#3fb950;">Tiempo</div><div style="font-size:0.7rem;color:#4a6080;text-transform:uppercase;letter-spacing:1px;margin-top:2px;">real</div></div>
+      <div style="text-align:center;background:rgba(255,255,255,0.07);border-radius:8px;padding:14px 18px;"><div style="font-size:1.2rem;font-weight:700;color:#3fb950;">Costo</div><div style="font-size:0.7rem;color:#4a6080;text-transform:uppercase;letter-spacing:1px;margin-top:2px;">vs plan</div></div>
+      <div style="text-align:center;background:rgba(255,255,255,0.07);border-radius:8px;padding:14px 18px;"><div style="font-size:1.2rem;font-weight:700;color:#3fb950;">Calidad</div><div style="font-size:0.7rem;color:#4a6080;text-transform:uppercase;letter-spacing:1px;margin-top:2px;">por obra</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- INVERSIÓN -->
+<div class="impact">
+  <h2>Inversión y Retorno — Propuesta London Consulting</h2>
+  <div class="impact-grid">
+    <div class="impact-card" style="border-top:3px solid #1a2332;">
+      <div class="sce">Inversión total consultoría</div>
+      <div class="amt" style="color:#1a2332;">$684K USD</div>
+      <div class="roi">114 semanas · equipo dedicado en sitio</div>
+    </div>
+    <div class="impact-card c2">
+      <div class="sce">Ahorro esperado (5% conservador)</div>
+      <div class="amt">$36.8M MXN</div>
+      <div class="roi">Sobre 100,000 m² de construcción proyectada</div>
+    </div>
+    <div class="impact-card c3">
+      <div class="sce">Retorno sobre la inversión</div>
+      <div class="amt">3.0x</div>
+      <div class="roi">Retorno neto: $1.36M USD</div>
+    </div>
+  </div>
+  <div style="margin-top:14px;font-size:0.75rem;color:#a0aec0;line-height:1.6;">* Inversión no incluye IVA ni software requerido. Los ahorros se calculan sobre el costo de construcción proyectado a tipo de cambio $18 USD/MXN. El método de evaluación financiera se define al cierre de la etapa de análisis.</div>
+</div>
+
+<footer>London Consulting Group × Aura Desarrollos · Prediagnóstico Operativo ABR 2026 · Confidencial</footer>
 
 </body>
 </html>
