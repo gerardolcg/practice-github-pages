@@ -14,7 +14,10 @@ https://gerardolcg.github.io/aura-prediagnostico-2026/
 
 ## Fuente de información
 El contenido viene del prediagnóstico operativo de London Consulting Group disponible en:
-https://londonconsultingmx.github.io/auradesarrollos/
+- **URL:** https://londonconsultingmx.github.io/auradesarrollos/
+- **Contraseña:** aura2026
+- **Documento completo:** https://londonconsultingmx.github.io/auradesarrollos/prediagnostico.html
+- **Playbook:** https://londonconsultingmx.github.io/auradesarrollos/playbook.html
 
 ## Estructura de la página
 1. Header + Stats (CMM 1.5, 50 oportunidades, 19 entrevistas, 13 pilares)
